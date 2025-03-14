@@ -1,0 +1,64 @@
+{
+    "menuItems": [
+      {
+        "title": "Industries",
+        "subItems": [
+          {
+            "title": "Aerospace & Defense",
+            "description": "Innovative solutions for aerospace and defense industries.",
+            "link": "#"
+          },
+          {
+            "title": "Automotive",
+            "description": "Driving the future of mobility.",
+            "link": "#"
+          },
+          {
+            "title": "Consumer Products",
+            "description": "Enhancing consumer experiences.",
+            "link": "#"
+          }
+        ]
+      },
+      {
+        "title": "Capabilities",
+        "subItems": [
+          {
+            "title": "Digital Transformation",
+            "description": "Transforming businesses with digital solutions.",
+            "link": "#"
+          },
+          {
+            "title": "Strategy",
+            "description": "Crafting winning strategies.",
+            "link": "#"
+          },
+          {
+            "title": "Operations",
+            "description": "Optimizing operations for efficiency.",
+            "link": "#"
+          }
+        ]
+      },
+      {
+        "title": "Insights",
+        "subItems": [
+          {
+            "title": "Case Studies",
+            "description": "Explore our success stories.",
+            "link": "#"
+          },
+          {
+            "title": "Reports",
+            "description": "In-depth industry reports.",
+            "link": "#"
+          },
+          {
+            "title": "Blog",
+            "description": "Latest insights and trends.",
+            "link": "#"
+          }
+        ]
+      }
+    ]
+  }

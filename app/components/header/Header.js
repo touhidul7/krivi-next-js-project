@@ -1,4 +1,4 @@
-import Image from "next/image";
+/* import Image from "next/image";
 import React from "react";
 
 export default function Header() {
@@ -226,4 +226,15 @@ export default function Header() {
       </nav>
     </div>
   );
+}
+ */
+import React from 'react'
+import MegaMenu from './MegaMenu'
+
+export default function Header() {
+  return (
+    <div>
+      <MegaMenu/>
+    </div>
+  )
 }
