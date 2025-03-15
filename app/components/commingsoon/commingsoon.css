@@ -6,8 +6,8 @@ body {
     flex-direction: column;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(to bottom, #1e3c72, #2a5298);
-    color: white;
+    background: white;
+    color: black;
     text-align: center;
   }
   

@@ -23,16 +23,26 @@ export default function CommingSoon() {
       }
 
       setTimeLeft({
-        days: String(Math.floor(timeDiff / (1000 * 60 * 60 * 24))).padStart(2, "0"),
-        hours: String(Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, "0"),
-        minutes: String(Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, "0"),
-        seconds: String(Math.floor((timeDiff % (1000 * 60)) / 1000)).padStart(2, "0"),
+        days: String(Math.floor(timeDiff / (1000 * 60 * 60 * 24))).padStart(
+          2,
+          "0"
+        ),
+        hours: String(
+          Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+        ).padStart(2, "0"),
+        minutes: String(
+          Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60))
+        ).padStart(2, "0"),
+        seconds: String(Math.floor((timeDiff % (1000 * 60)) / 1000)).padStart(
+          2,
+          "0"
+        ),
       });
     }
 
     updateCounter();
     const interval = setInterval(updateCounter, 1000);
-    
+
     return () => clearInterval(interval);
   }, []);
 
@@ -61,8 +71,10 @@ export default function CommingSoon() {
       </div>
 
       <div className="social-links">
-        <a href="#" target="_blank">Facebook</a> | 
-        <a href="#">Email Us</a>
+        <a href="#" target="_blank">
+          Facebook
+        </a>{" "}
+        |<a href="#">Email Us</a>
       </div>
 
       <footer>&copy; {new Date().getFullYear()} CSTRAP</footer>
