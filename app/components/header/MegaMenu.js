@@ -9,11 +9,11 @@ import Image from "next/image";
 
 const MegaMenu = () => {
   const [activeMenu, setActiveMenu] = useState(null);
-  const [menuItems, setMenuItems]=useState()
+  const [menuItems, setMenuItems] = useState([]);
   /* make a use effect to set the menuData in menuItems */
   useEffect(() => {
-    
-  }, [])
+    setMenuItems(menuData.menuItems);
+  }, []);
 
   return (
     <nav className="bg-white shadow-lg fixed top-0">
@@ -108,7 +108,6 @@ const MegaMenu = () => {
             </div>
           </div>
         </div>
-      </div>
     </nav>
   );
 };
