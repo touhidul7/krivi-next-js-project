@@ -1,10 +1,13 @@
 "use client";
 import React, { useState } from "react";
+import optionsData from "../../data/options.json";
+import secondQuestionOptionsData from "../../data/secondQuestionOptions.json";
 
 const Achievement = () => {
   const [selectedOption, setSelectedOption] = useState("");
   const [showSecondQuestion, setShowSecondQuestion] = useState(false);
   const [showAllOptions, setShowAllOptions] = useState(false);
+  const [showAllSecondOptions, setShowAllSecondOptions] = useState(false);
 
   const handleFirstQuestionChange = (event) => {
     setSelectedOption(event.target.value);
@@ -15,14 +18,17 @@ const Achievement = () => {
     setShowAllOptions(!showAllOptions);
   };
 
-  const options = Array.from({ length: 20 }, (_, i) => `Option ${i + 1}`);
-
-  const optionToImageMap = {
-    "Option 1": "/madlib-02.webp",
-    "Option 2": "/madlib-03.webp",
-    "Option 3": "/madlib-02.webp",
-    // Add mappings for other options
+  const toggleShowAllSecondOptions = () => {
+    setShowAllSecondOptions(!showAllSecondOptions);
   };
+
+  const options = optionsData.options.map(option => option.name);
+  const secondQuestionOptions = secondQuestionOptionsData.secondQuestionOptions;
+
+  const optionToImageMap = optionsData.options.reduce((map, option) => {
+    map[option.name] = option.image;
+    return map;
+  }, {});
 
   const selectedImage = optionToImageMap[selectedOption] || "/madlib-02.webp";
 
@@ -54,7 +60,7 @@ const Achievement = () => {
                       .map((option, index) => (
                         <button
                           key={index}
-                          className="p-4 border border-gray-200 text-red-600 font-bold text-lg rounded-4xl"
+                          className="px-3 py-2 border hover:bg-red-600 hover:text-white border-gray-200 text-red-600 font-semibold text-lg rounded-4xl"
                           onClick={() =>
                             handleFirstQuestionChange({
                               target: { value: option },
@@ -88,16 +94,26 @@ const Achievement = () => {
                     <span className="text-gray-500"> Question 2 of 2</span>
                   </label>
                   <div className="flex flex-wrap gap-2">
-                    {["Option A", "Option B", "Option C"].map((option, index) => (
-                      <button
-                        key={index}
-                        className="p-4 border border-gray-200 text-red-600 font-bold text-lg rounded-4xl"
-                        onClick={() => console.log(`Selected: ${option}`)}
-                      >
-                        {option}
-                      </button>
-                    ))}
+                    {secondQuestionOptions
+                      .slice(0, showAllSecondOptions ? secondQuestionOptions.length : 10)
+                      .map((option, index) => (
+                        <button
+                          key={index}
+                          className="px-3 py-2 border hover:bg-red-600 hover:text-white border-gray-200 text-red-600 font-semibold text-lg rounded-4xl"
+                          onClick={() => console.log(`Selected: ${option}`)}
+                        >
+                          {option}
+                        </button>
+                      ))}
                   </div>
+                  {!showAllSecondOptions && (
+                    <button
+                      className="mt-2 px-4 py-2 underline rounded-md text-sm"
+                      onClick={toggleShowAllSecondOptions}
+                    >
+                      View All
+                    </button>
+                  )}
                 </>
               )}
             </div>
@@ -108,7 +124,7 @@ const Achievement = () => {
               className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
               src={selectedImage}
               alt=""
-              style={{ height: "400px", width: "100%", objectFit: "cover" }}
+              style={{ height: "530px", width: "100%", objectFit: "cover" }}
             />
           </div>
 
