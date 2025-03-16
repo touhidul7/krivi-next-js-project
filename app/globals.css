@@ -1,8 +1,12 @@
 @import "tailwindcss";
 @import url('https://fonts.cdnfonts.com/css/graphik-trial');
+@import url(https://db.onlinewebfonts.com/c/1b3f9cb78376a36884f3908f37a42c91?family=Tiempos+Text+Regular);
 :root {
   --background: #ffffff;
   --foreground: #171717;
+}
+*{
+  box-sizing: border-box;
 }
 
 @theme inline {
@@ -26,6 +30,9 @@ body {
 }
 .font-graphic{
   font-family: 'Graphik Trial', sans-serif;
+}
+.font-tiempos{
+  font-family: 'Tiempos Text Regular';
 }
 
 /* header */
