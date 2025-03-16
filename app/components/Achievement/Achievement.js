@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import optionsData from "../../data/options.json";
 import secondQuestionOptionsData from "../../data/secondQuestionOptions.json";
+import Image from "next/image";
 
 const Achievement = () => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -120,7 +121,9 @@ const Achievement = () => {
           </div>
 
           <div className="lg:inset-y-0 lg:right-0 lg:w-1/2 my-4">
-            <img
+            <Image
+            width={100}
+            height={100}
               className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
               src={selectedImage}
               alt=""
