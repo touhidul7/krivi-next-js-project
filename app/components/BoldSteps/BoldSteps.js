@@ -1,32 +1,49 @@
 "use client";
 import Image from "next/image";
 import tabdata from "../../../public/data/boldSteps.json";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaCaretRight } from "react-icons/fa";
 import Link from "next/link";
 
 export default function BoldSteps() {
-  const [activeTab, setActiveTab] = useState(null);
+  const [activeTab, setActiveTab] = useState(tabdata[0]); 
   const [hoveredParent, setHoveredParent] = useState(false);
+  const [fade, setFade] = useState(true);
 
-  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false); // Start fade-out effect
+      setTimeout(() => {
+        setActiveTab((prevTab) => {
+          const currentIndex = tabdata.findIndex((tab) => tab === prevTab);
+          const nextIndex = (currentIndex + 1) % tabdata.length;
+          return tabdata[nextIndex];
+        });
+        setFade(true); // Start fade-in effect
+      }, 500); // Half-second transition between slides
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
 
   const tab = (item) => {
-    setActiveTab(item);
+    setFade(false);
+    setTimeout(() => {
+      setActiveTab(item);
+      setFade(true);
+    }, 300);
   };
-
-  if (!activeTab) {
-    setActiveTab(tabdata[0]);
-  }
 
   return (
     <div className="py-50 text-left">
       <div className="flex gap-10 justify-center w-[85%] mx-auto">
-        {activeTab && activeTab.img && (
-          <div className="border w-fit text-right">
+        {activeTab?.img && (
+          <div className=" w-fit text-right">
             <Image
-              src={activeTab?.img}
-              className="h-auto w-[900px] text-right"
+              src={activeTab.img}
+              className={`h-auto w-[900px] text-right transition-opacity duration-1000 ${
+                fade ? "opacity-100" : "opacity-0"
+              }`}
               width={100}
               height={100}
               alt="image"
@@ -49,17 +66,20 @@ export default function BoldSteps() {
                 Featured client success story
               </div>
               <div className="border-t-3 h-full pt-4 border-gray-400 flex flex-col justify-between">
-                <div className="">
-                  <div className="font-semibold leading-10 text-[28px] font-graphic">
+                <div>
+                  <div
+                    className={`font-semibold leading-10 text-[28px] font-graphic transition-opacity duration-700 ${
+                      fade ? "opacity-100" : "opacity-0"
+                    }`}
+                  >
                     {activeTab?.featured.title}
                   </div>
-                  
                 </div>
                 <Link href={activeTab?.featured.link}>
-                    <button className="flex gap-2 justify-center items-center mt-4 cursor-pointer text-red-600 font-medium">
-                      Read story <FaCaretRight />
-                    </button>
-                  </Link>
+                  <button className="flex gap-2 justify-center items-center mt-4 cursor-pointer text-red-600 font-medium">
+                    Read story <FaCaretRight />
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="h-full cursor-pointer">
@@ -69,41 +89,43 @@ export default function BoldSteps() {
                 onMouseEnter={() => setHoveredParent(true)}
                 onMouseLeave={() => setHoveredParent(false)}
               >
-                <div className=" parent">
+                <div className="parent">
                   <div
-                    className={`font-semibold leading-10 ${
+                    className={`font-semibold leading-10 font-graphic title transition-all duration-700 ${
                       hoveredParent ? "text-[20px]" : "text-[28px]"
-                    } font-graphic title transition-all duration-500`}
+                    }`}
                   >
                     {activeTab?.helped.title}
                   </div>
                   <div
-                    className={`text-[16px] font-tiempos description transition-all duration-300 ${
-                      hoveredParent ? "block" : "hidden"
+                    className={`text-[16px] font-tiempos description transition-opacity duration-500 ${
+                      hoveredParent ? "opacity-100" : "opacity-0"
                     }`}
                   >
                     {activeTab?.helped.des}
                   </div>
-
-                  
                 </div>
                 <Link href={activeTab?.helped.link}>
-                    <button className="flex gap-2 justify-center items-center mt-4 cursor-pointer text-red-600 font-medium">
-                      Read story <FaCaretRight />
-                    </button>
-                  </Link>
+                  <button className="flex gap-2 justify-center items-center mt-4 cursor-pointer text-red-600 font-medium">
+                    Read story <FaCaretRight />
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="pagination flex gap-4 justify-center">
-        {tabdata?.map((item, index) => (
+
+      {/* Pagination */}
+      <div className="pagination flex gap-4 justify-center mt-6">
+        {tabdata.map((item, index) => (
           <button
             key={index}
             onClick={() => tab(item)}
-            className={`p-2 rounded-full cursor-pointer ${
-              activeTab === item ? "bg-red-600" : "bg-gray-400"
+            className={`p-2 w-4 h-4 rounded-full transition-all duration-500 ${
+              activeTab === item
+                ? "bg-red-600 scale-110"
+                : "bg-gray-400 hover:bg-gray-500"
             }`}
           ></button>
         ))}
