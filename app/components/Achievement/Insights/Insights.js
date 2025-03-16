@@ -6,9 +6,9 @@ const Insights = () => {
     <div>
       <section className="sm:mt-6 lg:mt-28 lg:mb-8 mt-12 mb-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <h3 className="flex items-center w-full mb-10">
-          <span className="flex-grow bg-gray-400 rounded h-[1px]"></span>
+          <span className="flex-grow bg-gray-400 rounded h-[0.5px]"></span>
           <span className="mx-3 text-3xl font-bold">Our Latest Insights</span>
-          <span className="flex-grow bg-gray-400 rounded h-[1px]"></span>
+          <span className="flex-grow bg-gray-400 rounded h-[0.5px]"></span>
         </h3>
 
         <div className="mx-auto max-w-[1260px] ">
