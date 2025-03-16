@@ -1,5 +1,6 @@
 "use client";
 import React, { useRef } from "react";
+import { FaPlay } from "react-icons/fa";
 
 const DemoVedio = () => {
   const videoRef = useRef(null);
@@ -24,11 +25,11 @@ const DemoVedio = () => {
 
   return (
     <div>
-      <section class="relative h-[40rem] mb-5 flex flex-col items-start justify-center text-left text-white ">
-        <div class="video-docker absolute top-0 left-0 w-full h-full overflow-hidden">
+      <section className="relative h-[40rem] mb-5 mx-0 flex flex-col items-start justify-center text-left text-white overflow-hidden">
+        <div className="video-docker absolute top-0 left-0 w-full h-full overflow-hidden">
           <video
             ref={videoRef}
-            class="min-w-full min-h-full absolute object-cover"
+            className="w-full h-full absolute object-cover"
             src="../../../demo.mp4"
             type="video/mp4"
             autoPlay
@@ -37,17 +38,19 @@ const DemoVedio = () => {
             onClick={handleEnableControls}
           ></video>
         </div>
-        <div class="video-content space-y-2 z-10 ml-10">
-          <h1 class="font-light text-6xl">full Hero Video</h1>
-          <h3 class="font-light text-3xl">with TailwindCSS</h3>
+        <div className="video-content z-10 ml-10">
+          <h2 className="font-bold text-6xl leading-20 text-start mb-5">
+            Helping fast-moving <br/> innovators scale <br/> with purpose.
+          </h2>
+          <button className="border px-7 py-4 fomt-bold text-md hover:bg-red-600 cursor-pointer">Join Us</button>
+          
         </div>
-        <div class="play-button absolute inset-0 flex items-center justify-center z-20">
+        <div className="play-button absolute inset-0 flex items-center justify-center z-20">
           <button
-            class="bg-white cursor-pointer text-black p-4 rounded-full"
+            className="bg-white cursor-pointer text-red-600 p-4 rounded-full flex items-center justify-center"
             onClick={handlePlayPause}
           >
-            Play/Pause
-            
+            <FaPlay size={25} />
           </button>
         </div>
       </section>

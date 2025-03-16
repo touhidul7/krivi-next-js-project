@@ -9,12 +9,8 @@ import Image from "next/image";
 const MegaMenu = () => {
   const [activeMenu, setActiveMenu] = useState(null);
   const [menuItems, setMenuItems] = useState([]);
-<<<<<<< HEAD
-  /* make a use effect to set the menuData in menuItems */
-=======
 
   // Set menuItems state with menuData on component mount
->>>>>>> 30a03acd6fd0ede881cc7f2dd1088863778846c3
   useEffect(() => {
     setMenuItems(menuData.menuItems);
   }, []);
@@ -74,6 +70,7 @@ const MegaMenu = () => {
             <IoIosSearch size={30} />
           </div>
         </div>
+      </div>
     </nav>
   );
 };
