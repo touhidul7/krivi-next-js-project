@@ -16,7 +16,7 @@ const MegaMenu = () => {
   }, []);
 
   return (
-    <nav className="bg-white shadow-lg fixed top-0 w-full">
+    <nav className="bg-white shadow-lg fixed top-0 w-full z-[999]">
       <div className="max-w-screen min-w-screen px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
