@@ -6,22 +6,28 @@ import { FaCaretRight } from "react-icons/fa";
 import Link from "next/link";
 
 export default function BoldSteps() {
-  const [activeTab, setActiveTab] = useState(tabdata[0]); 
-  const [hoveredParent, setHoveredParent] = useState(false);
+  const [activeTab, setActiveTab] = useState(tabdata[0]);
   const [fade, setFade] = useState(true);
+  const [hoverIndex, setHoverIndex] = useState(null);
+  const [progress, setProgress] = useState(0);
+  const [hoveredParent, setHoveredParent] = useState(false);
+  const [hoverProgress, setHoverProgress] = useState(0);
 
+  let hoverTimer;
+  let hoverProgressTimer;
+
+  // Auto-switch content every 3 seconds (faster)
   useEffect(() => {
     const interval = setInterval(() => {
-      setFade(false); // Start fade-out effect
+      setFade(false);
       setTimeout(() => {
         setActiveTab((prevTab) => {
           const currentIndex = tabdata.findIndex((tab) => tab === prevTab);
-          const nextIndex = (currentIndex + 1) % tabdata.length;
-          return tabdata[nextIndex];
+          return tabdata[(currentIndex + 1) % tabdata.length];
         });
-        setFade(true); // Start fade-in effect
-      }, 500); // Half-second transition between slides
-    }, 5000); // Change slide every 5 seconds
+        setFade(true);
+      }, 300);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -31,21 +37,73 @@ export default function BoldSteps() {
     setTimeout(() => {
       setActiveTab(item);
       setFade(true);
-    }, 300);
+    }, 200);
+  };
+
+  // Faster hover progress
+  const handleHoverStart = (index) => {
+    setHoverIndex(index);
+    setProgress(0);
+    hoverTimer = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 100) {
+          clearInterval(hoverTimer);
+          tab(tabdata[index]);
+          return 0;
+        }
+        return prev + 5; // Faster progress
+      });
+    }, 50);
+  };
+
+  const handleHoverEnd = () => {
+    clearInterval(hoverTimer);
+    let tempProgress = progress;
+    const decreaseInterval = setInterval(() => {
+      tempProgress -= 10; // Faster decrease
+      setProgress(tempProgress);
+      if (tempProgress <= 0) clearInterval(decreaseInterval);
+    }, 20);
+  };
+
+  // Faster parent hover effect
+  const handleHoverStartParent = () => {
+    setHoveredParent(true);
+    setHoverProgress(0);
+    hoverProgressTimer = setInterval(() => {
+      setHoverProgress((prev) => {
+        if (prev >= 100) {
+          clearInterval(hoverProgressTimer);
+          return 100;
+        }
+        return prev + 5;
+      });
+    }, 50);
+  };
+
+  const handleHoverEndParent = () => {
+    setHoveredParent(false);
+    clearInterval(hoverProgressTimer);
+    let tempProgress = hoverProgress;
+    const decreaseInterval = setInterval(() => {
+      tempProgress -= 10;
+      setHoverProgress(tempProgress);
+      if (tempProgress <= 0) clearInterval(decreaseInterval);
+    }, 20);
   };
 
   return (
     <div className="py-50 text-left">
-      <div className="flex gap-10 justify-center w-[85%] mx-auto">
+      <div className="flex lg:flex-row flex-col gap-10 justify-center w-[85%] mx-auto">
         {activeTab?.img && (
-          <div className=" w-fit text-right">
+          <div className="border w-fit text-right">
             <Image
               src={activeTab.img}
-              className={`h-auto w-[900px] text-right transition-opacity duration-1000 ${
+              className={`h-auto w-[900px] text-right transition-opacity duration-700 ${
                 fade ? "opacity-100" : "opacity-0"
               }`}
-              width={100}
-              height={100}
+              width={500}
+              height={500}
               alt="image"
             />
           </div>
@@ -60,7 +118,7 @@ export default function BoldSteps() {
               outcomes.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-4 justify-items-stretch items-stretch">
+          <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 justify-items-stretch items-stretch">
             <div className="h-full">
               <div className="text-lg font-graphic mb-4">
                 Featured client success story
@@ -68,37 +126,45 @@ export default function BoldSteps() {
               <div className="border-t-3 h-full pt-4 border-gray-400 flex flex-col justify-between">
                 <div>
                   <div
-                    className={`font-semibold leading-10 text-[28px] font-graphic transition-opacity duration-700 ${
+                    className={`font-semibold leading-10 text-[28px] font-graphic transition-opacity duration-500 ${
                       fade ? "opacity-100" : "opacity-0"
                     }`}
                   >
                     {activeTab?.featured.title}
                   </div>
                 </div>
-                <Link href={activeTab?.featured.link}>
+                <Link className="lg:mb-0 mb-16" href={activeTab?.featured.link}>
                   <button className="flex gap-2 justify-center items-center mt-4 cursor-pointer text-red-600 font-medium">
                     Read story <FaCaretRight />
                   </button>
                 </Link>
               </div>
             </div>
+
+            {/* Parent div with Faster Hover Progress */}
             <div className="h-full cursor-pointer">
               <div className="text-lg mb-4">How we helped</div>
               <div
-                className="h-full border-t-3 border-1 p-4 border-gray-400 flex flex-col justify-between"
-                onMouseEnter={() => setHoveredParent(true)}
-                onMouseLeave={() => setHoveredParent(false)}
+                className="h-full border-t-3 border-1 p-4 border-gray-400 flex flex-col justify-between parent relative"
+                onMouseEnter={handleHoverStartParent}
+                onMouseLeave={handleHoverEndParent}
               >
+                {/* Progress Bar */}
+                <div
+                  className="absolute top-0 -mt-[2px] left-0 h-[3px] bg-red-600 transition-all duration-100"
+                  style={{ width: `${hoverProgress}%` }}
+                ></div>
+
                 <div className="parent">
                   <div
-                    className={`font-semibold leading-10 font-graphic title transition-all duration-700 ${
+                    className={`font-semibold leading-10 font-graphic title transition-all duration-500 ${
                       hoveredParent ? "text-[20px]" : "text-[28px]"
                     }`}
                   >
                     {activeTab?.helped.title}
                   </div>
                   <div
-                    className={`text-[16px] font-tiempos description transition-opacity duration-500 ${
+                    className={`text-[16px] font-tiempos description transition-opacity duration-300 ${
                       hoveredParent ? "opacity-100" : "opacity-0"
                     }`}
                   >
@@ -116,20 +182,41 @@ export default function BoldSteps() {
         </div>
       </div>
 
-      {/* Pagination */}
-      <div className="pagination flex gap-4 justify-center mt-6">
+      {/* Pagination with Faster Hover Progress */}
+      <div className="pagination flex gap-4 justify-center lg:mt-6 mt-16">
         {tabdata.map((item, index) => (
-          <button
+          <div
             key={index}
-            onClick={() => tab(item)}
-            className={`p-2 w-4 h-4 rounded-full transition-all duration-500 ${
-              activeTab === item
-                ? "bg-red-600 scale-110"
-                : "bg-gray-400 hover:bg-gray-500"
-            }`}
-          ></button>
+            className="relative w-5 h-5 flex justify-center items-center"
+            onMouseEnter={() => handleHoverStart(index)}
+            onMouseLeave={handleHoverEnd}
+          >
+            <div className="absolute w-full h-full rounded-full border-2 border-gray-400"></div>
+
+            {hoverIndex === index && (
+              <div
+                className="absolute w-full h-full rounded-full border-2 border-red-600"
+                style={{
+                  clipPath: `inset(${100 - progress}% 0 0 0)`,
+                  transition: "clip-path 0.05s linear",
+                }}
+              ></div>
+            )}
+
+            <button
+              onClick={() => tab(item)}
+              className={`relative w-3 h-3 rounded-full transition-all duration-300 ${
+                activeTab === item ? "bg-red-600 scale-110" : "bg-gray-400"
+              }`}
+            ></button>
+          </div>
         ))}
       </div>
+      <div className="w-full text-center mt-10 text-[13px] font-semibold font-graphic">
+            <button className="p-4 border border-gray-300 text-red-700 uppercase hover:bg-red-700 hover:text-white cursor-pointer">
+            See all client results
+            </button>
+          </div>
     </div>
   );
 }
