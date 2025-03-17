@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import { FaBookmark } from "react-icons/fa";
 import { CiBookmark } from "react-icons/ci";
 
 

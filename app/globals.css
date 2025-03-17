@@ -58,3 +58,8 @@ body {
   background: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
+
+
+.hover\\:scale-x-100:hover {
+  transform: scaleX(2);
+}
