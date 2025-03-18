@@ -5,6 +5,8 @@ import React, { useEffect, useState } from "react";
 import menuData from "../../../public/data/megaMenu.json";
 import Link from "next/link";
 import Image from "next/image";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { CiBookmark } from "react-icons/ci";
 
 const MegaMenu = () => {
   const [activeMenu, setActiveMenu] = useState(null);
@@ -18,8 +20,10 @@ const MegaMenu = () => {
   return (
     <nav className="bg-white shadow-lg fixed top-0 w-full z-[999]">
       <div className="max-w-screen min-w-screen px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex items-center justify-center">
+        <div className="flex justify-between h-16 lg:w-[90%] mx-auto">
+          <div className="flex items-center">
+          <div className="flex items-center gap-4">
+          <RxHamburgerMenu size={25} className="text-gray-500 cursor-pointer"/>
             {/* Your logo here */}
             <Link href={"/"} className="text-lg font-bold">
               <Image
@@ -65,9 +69,12 @@ const MegaMenu = () => {
               </div>
             ))}
           </div>
+          </div>
           <div className="flex items-center text-[#979797] gap-2 font-graphic text-md cursor-pointer">
             Explore
             <IoIosSearch size={30} />
+            <CiBookmark size={40} className="border-l-[0.4px] border-gray-300 pl-2" />
+
           </div>
         </div>
       </div>

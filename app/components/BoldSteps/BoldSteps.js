@@ -93,7 +93,7 @@ export default function BoldSteps() {
   };
 
   return (
-    <div className="py-50 text-left">
+    <div className="pb-20 pt-10 text-left">
       <div className="flex lg:flex-row flex-col gap-10 justify-center w-[85%] mx-auto">
         {activeTab?.img && (
           <div className="border w-fit text-right">
