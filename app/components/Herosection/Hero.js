@@ -83,7 +83,7 @@ export default function Hero() {
               alt={slide.title}
               className="absolute top-0 left-0 w-full h-full object-cover"
             />
-            <div className="absolute inset-0 flex flex-col mx-auto items-start lg:px-36 bottom-0 justify-between text-white bg-[#0000005c] p-6">
+            <div className="absolute lg:pt-20 inset-0 flex flex-col mx-auto items-start lg:px-36 bottom-0 justify-between text-white bg-[#0000005c] p-6">
               <div></div>
               <div className="z-50 lg:w-[40%]">
                 <h4 className="lg:text-[1.125rem] text-[16px] font-graphic font-bold z-400">
