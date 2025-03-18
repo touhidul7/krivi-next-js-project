@@ -110,10 +110,10 @@ export default function BoldSteps() {
         )}
         <div className="w-full font-graphic">
           <div className="mb-10">
-            <div className="heading text-6xl font-bold font-graphic mb-4">
+            <div className="heading text-5xl font-bold font-graphic mb-4">
               Bold steps forward.
             </div>
-            <p className="font-tiempos text-xl">
+            <p className="font-tiempos text-xl font-light">
               See how we’ve helped ambitious clients achieve extraordinary
               outcomes.
             </p>

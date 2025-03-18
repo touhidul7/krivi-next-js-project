@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import Link from "next/link";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { FaAngleDown, FaArrowRightLong } from "react-icons/fa6";
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -28,7 +28,7 @@ export default function Hero() {
     {
       id: 1,
       name: "Private Equity",
-      title: "Asia-Pacific Private Equity Report Webinar",
+      title: "Global Private Equity Report 2025",
       description: "We provide top-notch consulting services to boost your success.",
       image: "/slide-1.webp",
       linktxt: "Read the report",
@@ -85,13 +85,13 @@ export default function Hero() {
             />
             <div className="absolute inset-0 flex flex-col mx-auto items-start lg:px-36 bottom-0 justify-between text-white bg-[#0000005c] p-6">
               <div></div>
-              <div className="z-50 lg:w-[50%]">
+              <div className="z-50 lg:w-[40%]">
                 <h4 className="lg:text-[1.125rem] text-[16px] font-graphic font-bold z-400">
                   {slide.name}
                 </h4>
                 <Link
                   href={slide.link}
-                  className="text-[40px] lg:text-[60px] font-medium font-graphic z-400 lg:w-[40px] leading-snug"
+                  className="text-[40px] lg:text-[60px] font-semibold font-graphic z-400  leading-[70px]"
                 >
                   {slide.title}
                 </Link>
@@ -119,6 +119,9 @@ export default function Hero() {
           </div>
         ))}
       </Slider>
+      <Link href={"#scroll"} className="absolute bottom-0 font-extralight gap-2 text-[12px] right-0 m-6 flex flex-col justify-center items-center text-white">
+        Scroll <span className="p-2 border-1 border-white rounded-full"><FaAngleDown  size={30}/></span>
+      </Link>
     </div>
   );
 }

@@ -19,7 +19,7 @@ const MegaMenu = () => {
     <nav className="bg-white shadow-lg fixed top-0 w-full z-[999]">
       <div className="max-w-screen min-w-screen px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
-          <div className="flex items-center">
+          <div className="flex items-center justify-center">
             {/* Your logo here */}
             <Link href={"/"} className="text-lg font-bold">
               <Image
@@ -32,7 +32,7 @@ const MegaMenu = () => {
               />
             </Link>
           </div>
-          <div className="hidden md:flex md:space-x-8 md:ml-10">
+          <div className="hidden md:flex md:items-center md:space-x-8 md:ml-10">
             {menuItems.map((menuItem, index) => (
               <div
                 key={index}
@@ -40,7 +40,7 @@ const MegaMenu = () => {
                 onMouseLeave={() => setActiveMenu(null)}
                 className="relative"
               >
-                <button className="text-[#333] px-3 py-2 text-sm flex gap-2 items-center cursor-pointer hover:text-red-800 hover:border-b-2 border-red-800 menuitem font-graphic text-[.875rem] font-semibold">
+                <button className="text-[#333] px-3 py-2 text-sm flex gap-2 items-center cursor-pointer border-transparent hover:text-red-800 border-b-2 hover:border-red-800 menuitem font-graphic text-[.875rem] font-semibold">
                   {menuItem.title}
                   <GoTriangleDown className="icon" />
                 </button>
