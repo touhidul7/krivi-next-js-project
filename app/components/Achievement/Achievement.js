@@ -46,9 +46,9 @@ const Achievement = () => {
   return (
     <div>
       <section className="sm:mt-6 lg:mt-8 mt-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className=" my-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 flex gap-3 lg:flex-justify lg:flex  lg:flex-row">
+        <div className="my-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 flex flex-col lg:flex-row gap-3">
           {!showNewSection ? (
-            <div className="lg:w-1/2">
+            <div className="lg:w-1/2 w-full">
               <div className="mt-5 flex flex-col items-start">
                 <>
                   <span className="text-[40px] text-start text-black leading-10 mb-3 font-medium pr-2">
@@ -143,7 +143,7 @@ const Achievement = () => {
             <NewSection resetQuestions={resetQuestions} />
           )}
           {!showNewSection && (
-            <div className="lg:inset-y-0 lg:right-0 lg:w-1/2 my-4">
+            <div className="lg:inset-y-0 lg:right-0 lg:w-1/2 w-full my-4">
               <Image
                 width={500}
                 height={500}
