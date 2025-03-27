@@ -1,9 +1,10 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { FaPlay } from "react-icons/fa";
 
 const DemoVedio = () => {
   const videoRef = useRef(null);
+  const [play, setPlay] = useState(false)
 
   const handlePlayPause = () => {
     if (videoRef.current) {
@@ -40,22 +41,39 @@ const DemoVedio = () => {
         </div>
         <div className="video-content z-10 ml-10">
           <h2 className="font-bold text-6xl leading-20 text-start mb-5">
-            Helping fast-moving <br/> innovators scale <br/> with purpose.
+            Helping fast-moving <br /> innovators scale <br /> with purpose.
           </h2>
-          <button className="border px-7 py-4 fomt-bold text-md hover:bg-red-900 hover:border-red-900 transition-all  z-[999] cursor-pointer">Join Us</button>
-          
+          <button className="border px-7 py-4 fomt-bold text-md hover:bg-red-900 hover:border-red-900 transition-all  z-30 cursor-pointer">Join Us</button>
+
         </div>
-        <div className="play-button absolute right-0 left-0 flex items-center justify-center z-[999] ">
+        <div className="play-button absolute right-0 left-0 flex items-center justify-center z-[30] ">
           <button
             className="bg-white cursor-pointer text-red-600 p-6 opacity-65 rounded-full flex items-center justify-center"
-            onClick={handlePlayPause}
+            onClick={() => { handlePlayPause(); setPlay(!play); }}
           >
             <FaPlay size={25} />
           </button>
         </div>
+        <FullScreenVideo play={play} />
       </section>
     </div>
   );
 };
 
 export default DemoVedio;
+
+
+const FullScreenVideo = ({ play }) => {
+  return (
+    <div className={`absolute inset-0 bg-black z-50 flex items-center justify-center ${play ? "block" : "hidden"}`}>
+      <video 
+        className="w-screen h-full object-contain" 
+        controls={true} 
+        autoPlay={play}
+      >
+        <source src="../../../demo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  );
+};
