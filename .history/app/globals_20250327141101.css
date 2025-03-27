@@ -63,11 +63,3 @@ body {
 .hover\\:scale-x-100:hover {
   transform: scaleX(2);
 }
-
-.hero-bg{
-/*   background-image: linear-gradient(to right, white 30%, rgba(255, 255, 255, 0) 70%);
- */
- background-image: linear-gradient(to right, white 30%, rgba(255, 255, 255, 0) 60%),
-                  linear-gradient(to top, white 10%, rgba(255, 255, 255, 0) 30%);
-
-}

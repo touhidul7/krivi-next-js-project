@@ -90,9 +90,9 @@ export default function Hero() {
             <div className="absolute lg:pt-20 inset-0 flex flex-col mx-auto items-start lg:px-36 bottom-0 justify-between text-black hero-bg p-6 ">
               <div></div>
               <div className="z-50 lg:w-[40%]">
-                {/* <h4 className="lg:text-[1.125rem] text-[16px] font-graphic font-bold z-400">
+                <h4 className="lg:text-[1.125rem] text-[16px] font-graphic font-bold z-400">
                   {slide.name}
-                </h4> */}
+                </h4>
                 <Link
                   href={slide.link}
                   className="text-[40px] lg:text-[60px] font-semibold font-graphic z-400  leading-[70px]"

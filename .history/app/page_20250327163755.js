@@ -14,7 +14,7 @@ export default function page() {
   return (
     <div className=''>
       <Hero />
-      {/* <Achievement /> */}
+      <Achievement />
       <Approach />
       <Deliverable/>
       <BoldSteps />

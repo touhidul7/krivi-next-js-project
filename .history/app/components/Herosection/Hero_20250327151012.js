@@ -30,7 +30,6 @@ export default function Hero() {
       name: "Private Equity",
       title: "Global Private Equity Report 2025",
       description: "We provide top-notch consulting services to boost your success.",
-      longdescription: "Build future-ready marketing and sales operations powered by artificial intelligence and data-driven insights. Turn strategy into measurable success with our comprehensive suite of AI solutions.",
       image: "/slide-1.webp",
       linktxt: "Read the report",
       link: "#",
@@ -40,7 +39,6 @@ export default function Hero() {
       name: "AI In Marketing",
       title: "Innovative Strategies",
       description: "Transform your business with cutting-edge solutions.",
-      longdescription: "Build future-ready marketing and sales operations powered by artificial intelligence and data-driven insights. Turn strategy into measurable success with our comprehensive suite of AI solutions.",
       image: "/slide-2.webp",
       linktxt: "Register for the webinar",
       link: "#",
@@ -50,7 +48,6 @@ export default function Hero() {
       name: "Payments",
       title: "Can US Banks Protect Their Card-Issuing Business?",
       description: "Our experts are here to help you achieve your goals.",
-      longdescription: "Build future-ready marketing and sales operations powered by artificial intelligence and data-driven insights. Turn strategy into measurable success with our comprehensive suite of AI solutions.",
       image: "/slide-3.webp",
       linktxt: "Read more",
       link: "#",
@@ -60,7 +57,6 @@ export default function Hero() {
       name: "AI In Marketing",
       title: "For Marketers, Gen AI Moves from Novelty to Necessity",
       description: "Our experts are here to help you achieve your goals.",
-      longdescription: "Build future-ready marketing and sales operations powered by artificial intelligence and data-driven insights. Turn strategy into measurable success with our comprehensive suite of AI solutions.",
       image: "/slide-3.webp",
       linktxt: "Read more",
       link: "#",
@@ -87,21 +83,20 @@ export default function Hero() {
               alt={slide.title}
               className="absolute top-0 left-0 w-full h-full object-cover"
             />
-            <div className="absolute lg:pt-20 inset-0 flex flex-col mx-auto items-start lg:px-36 bottom-0 justify-between text-black hero-bg p-6 ">
+            <div className="absolute lg:pt-20 inset-0 flex flex-col mx-auto items-start lg:px-36 bottom-0 justify-between text-white bg-[#0000005c] p-6 ">
               <div></div>
               <div className="z-50 lg:w-[40%]">
-                {/* <h4 className="lg:text-[1.125rem] text-[16px] font-graphic font-bold z-400">
+                <h4 className="lg:text-[1.125rem] text-[16px] font-graphic font-bold z-400">
                   {slide.name}
-                </h4> */}
+                </h4>
                 <Link
                   href={slide.link}
                   className="text-[40px] lg:text-[60px] font-semibold font-graphic z-400  leading-[70px]"
                 >
                   {slide.title}
                 </Link>
-                <p className="text-lg md:text-2xl font-semibold mt-4 z-400">{slide.description}</p>
-                <p className="mt-4 z-400 text-md">{slide.longdescription}</p>
-                <button className="z-50 flex gap-4 hover:gap-8 items-center mt-10 cursor-pointer bg-[#E7000B] text-white p-4">
+                <p className="text-lg md:text-xl mt-4 z-400">{slide.description}</p>
+                <button className="z-50 flex gap-4 hover:gap-8 items-center mt-10 cursor-pointer">
                   {slide.linktxt} <FaArrowRightLong />
                 </button>
               </div>

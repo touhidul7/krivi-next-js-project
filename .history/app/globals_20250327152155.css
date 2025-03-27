@@ -65,9 +65,9 @@ body {
 }
 
 .hero-bg{
-/*   background-image: linear-gradient(to right, white 30%, rgba(255, 255, 255, 0) 70%);
- */
- background-image: linear-gradient(to right, white 30%, rgba(255, 255, 255, 0) 60%),
-                  linear-gradient(to top, white 10%, rgba(255, 255, 255, 0) 30%);
+/*   background-image: linear-gradient(to right, white 30%, rgba(255, 255, 255, 0) 70%); */
+background: 
+  linear-gradient(to right, white 40%, rgba(255, 255, 255, 0.5) 70%, rgba(255, 255, 255, 0) 100%),
+  white;
 
 }
