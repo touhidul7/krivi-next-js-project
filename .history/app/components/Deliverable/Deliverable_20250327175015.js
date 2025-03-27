@@ -24,7 +24,7 @@ const NewSection = ({ resetQuestions }) => {
                 <div className="my-10 mx-auto sm:mt-12 sm:px-6  lg:px-0  flex flex-col lg:flex-row gap-3">
 
                     <div className="lg:w-full w-full ">
-                        <div class="bg-white  ">
+                        <div class="bg-white mt-16 ">
                             <div class="container mx-auto py-8 px-4 md:px-0 md:flex md:justify-center md:items-start">
 
                                 <section className="sm:mt-6 mx-auto px-4 sm:px-6">

@@ -24,16 +24,15 @@ const NewSection = ({ resetQuestions }) => {
                 <div className="my-10 mx-auto sm:mt-12 sm:px-6  lg:px-0  flex flex-col lg:flex-row gap-3">
 
                     <div className="lg:w-full w-full ">
-                        <div class="bg-white  ">
+                        <div class="bg-white mt-16 ">
                             <div class="container mx-auto py-8 px-4 md:px-0 md:flex md:justify-center md:items-start">
 
-                                <section className="sm:mt-6 mx-auto px-4 sm:px-6">
+                                <section className="sm:mt-6   mx-auto px-4 sm:px-6">
                                     <div className="mt-5 mb-10 new-section flex flex-col lg:flex-row justify-center w-full gap-10 lg:gap-20">
                                         <div className="w-full ">
-                                            <h1 className="text-[32px] sm:text-[42px]  leading-10 sm:leading-12 text-black mb-3 font-medium text-center">
+                                            <h1 className="text-[32px] sm:text-[42px]  leading-10 sm:leading-12 text-black mb-3 font-medium">
                                                 {headers.industry}
                                             </h1>
-                                            <p className="text-lg mb-4 font-semibold text-center">What do our B2B SEO services include?</p>
                                         </div>
                                     </div>
 

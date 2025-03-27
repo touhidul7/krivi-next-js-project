@@ -7,7 +7,7 @@ const Approach = () => {
                 <div className="my-10 mx-auto sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-0 xl:mt-28 flex flex-col lg:flex-row gap-3">
 
                     <div className="lg:w-full w-full ">
-                        <div class="bg-[#1c1c1f] py-20">
+                        <div class="bg-[#1c1c1f]  py-20">
                             <div class="container mx-auto px-4 md:px-0 md:flex md:justify-center md:items-start">
 
                                 <div class="md:w-1/2 lg:w-1/3 md:mr-8 bg-white p-4">
