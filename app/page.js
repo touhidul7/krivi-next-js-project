@@ -6,6 +6,7 @@ import Hero from './components/Herosection/Hero'
 import RedSection from './components/RedSection/RedSection'
 import Approach from './components/Approach/Approach'
 import Deliverable from './components/Deliverable/Deliverable'
+import WhyUs from './components/WhyUs/WhyUs'
 
 
 export default function page() {
@@ -17,8 +18,9 @@ export default function page() {
       {/* <Achievement /> */}
       <Approach />
       <Deliverable/>
-      <BoldSteps />
+      {/* <BoldSteps /> */}
       <DemoVedio />
+      <WhyUs/>
       <Insights />
       <RedSection />
     </div>

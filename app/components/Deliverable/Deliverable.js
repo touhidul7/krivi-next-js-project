@@ -20,7 +20,7 @@ const NewSection = ({ resetQuestions }) => {
     return (
         <div>
 
-            <section className="sm:mt-6 max-w-full mx-auto px-4 sm:px-6 lg:px-0">
+            <section className="sm:mt-6 max-w-full lg:w-[85%] mx-auto px-4 sm:px-6 lg:px-0">
                 <div className="my-10 mx-auto sm:mt-12 sm:px-6  lg:px-0  flex flex-col lg:flex-row gap-3">
 
                     <div className="lg:w-full w-full ">
@@ -37,7 +37,6 @@ const NewSection = ({ resetQuestions }) => {
                                         </div>
                                     </div>
 
-                                    <p className="text-black text-lg font-bold mb-5">Recommended for you</p>
 
                                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 w-full">
                                         {services.map((service, index) => (
