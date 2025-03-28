@@ -28,8 +28,9 @@ const MegaMenu = () => {
             <Link href={"/"} className="text-lg font-bold">
               <Image
                 src={
-                  "https://www.bain.com/contentassets/0b88e3e10a7b4592809517c28b75847e/logo_red_bain.svg"
+                  "/Logo.svg"
                 }
+                className="w-16"
                 width={200}
                 height={100}
                 alt="Bain Logo"

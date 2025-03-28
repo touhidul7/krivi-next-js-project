@@ -9,8 +9,8 @@ const Whyus = () => {
             <section id="scroll" className="sm:mt-6 lg:mt-8 mt-12 max-w-full mx-auto px-4 sm:px-6 lg:px-0">
                 <div className=" mx-auto sm:mt-12 sm:px-6 md:mt-16 lg:mt-10 lg:px-0  flex flex-col lg:flex-row gap-3">
 
-                    <div className="lg:w-full w-full ">
-                        <div className="bg-[#E7000B] py-20">
+                    <div className="lg:w-full w-full bg-[#E7000B]">
+                        <div className=" lg:w-[85%] mx-auto py-20">
                             <h1 className="text-3xl font-bold mb-4 text-center text-white">Why Us</h1>
                             <p className="text-lg mb-4 font-semibold text-center text-white">Drive Growth With Proven B2B Strategies</p>
                             <div className="container mt-12 mx-auto px-4 md:px-0 md:flex md:justify-center md:items-start">

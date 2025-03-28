@@ -8,8 +8,8 @@ const Approach = () => {
             <section id="scroll" className="sm:mt-6 lg:mt-8 mt-12 max-w-fu mx-auto px-4 sm:px-6 lg:px-0">
                 <div className="my-10 mx-auto sm:mt-12 sm:px-6 md:mt-16 lg:mt-10 lg:px-0  flex flex-col lg:flex-row gap-3">
 
-                    <div className="lg:w-full w-full ">
-                        <div className="bg-[#1c1c1f] py-20">
+                    <div className="lg:w-full w-full bg-[#1c1c1f]">
+                        <div className=" py-20 lg:w-[85%] mx-auto">
                             <div className="container mx-auto px-4 md:px-0 md:flex md:justify-center md:items-start">
 
                                 <div className="md:w-1/2 lg:w-1/3 md:mr-8 bg-white p-4">

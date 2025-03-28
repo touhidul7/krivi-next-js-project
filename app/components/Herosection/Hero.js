@@ -28,7 +28,7 @@ export default function Hero() {
     {
       id: 1,
       name: "Private Equity",
-      title: "Global Private Equity Report 2025",
+      title: "Global Private Equity Report",
       description: "We provide top-notch consulting services to boost your success.",
       longdescription: "Build future-ready marketing and sales operations powered by artificial intelligence and data-driven insights. Turn strategy into measurable success with our comprehensive suite of AI solutions.",
       image: "/slide-1.webp",
@@ -48,7 +48,7 @@ export default function Hero() {
     {
       id: 4,
       name: "Payments",
-      title: "Can US Banks Protect Their Card-Issuing Business?",
+      title: "Can US Banks Protect Their Business?",
       description: "Our experts are here to help you achieve your goals.",
       longdescription: "Build future-ready marketing and sales operations powered by artificial intelligence and data-driven insights. Turn strategy into measurable success with our comprehensive suite of AI solutions.",
       image: "/slide-3.webp",
@@ -58,7 +58,7 @@ export default function Hero() {
     {
       id: 3,
       name: "AI In Marketing",
-      title: "For Marketers, Gen AI Moves from Novelty to Necessity",
+      title: "For Marketers, Gen AI Moves from Novelty",
       description: "Our experts are here to help you achieve your goals.",
       longdescription: "Build future-ready marketing and sales operations powered by artificial intelligence and data-driven insights. Turn strategy into measurable success with our comprehensive suite of AI solutions.",
       image: "/slide-3.webp",
@@ -73,12 +73,12 @@ export default function Hero() {
   };
 
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-transparent">
+    <div className="relative w-full min-h-screen overflow-hidden bg-transparent">
       <Slider ref={sliderRef} {...settings} className="w-full h-full">
         {slides.map((slide) => (
           <div
             key={slide.id}
-            className="relative w-full h-screen bg-[#0000005c] flex items-center justify-center"
+            className="relative w-full h-screen bg-[#0000005c] flex items-center justify-center "
           >
             <Image
               height={1000}
@@ -87,7 +87,7 @@ export default function Hero() {
               alt={slide.title}
               className="absolute top-0 left-0 w-full h-full object-cover"
             />
-            <div className="absolute  inset-0 flex flex-col mx-auto items-start lg:px-36 bottom-0 justify-between text-black hero-bg p-6 ">
+            <div className="absolute pt-32  inset-0 flex flex-col mx-auto items-start lg:px-36 bottom-0 justify-between text-black hero-bg p-6 ">
               <div></div>
               <div className="z-50 lg:w-[40%]">
                 {/* <h4 className="lg:text-[1.125rem] text-[16px] font-graphic font-bold z-400">

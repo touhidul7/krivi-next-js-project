@@ -25,7 +25,7 @@ const DemoVedio = () => {
   };
 
   return (
-    <div className="max-w-screen p-0">
+    <div className="max-w-screen p-0 mt-20 lg:mt-0">
       <section className="relative w-[99vw] mx-auto h-[40rem] flex flex-col items-start justify-center text-left text-white overflow-hidden">
         <div className="video-docker absolute top-0 left-0 w-full h-full overflow-hidden ">
           <video

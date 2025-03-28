@@ -1,9 +1,14 @@
-import React from "react";
+'use client';
+import React, { useState } from "react";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { AiOutlineYoutube } from "react-icons/ai";
+import Link from "next/link";
 
 export default function RedSection() {
+  const [termChecked, setTermCheked] = useState(false);
   return (
     <div>
-      <div className="flex   w-full bg-black py-10 px-20">
+      <div className="flex lg:flex-row flex-col  w-full bg-black py-10 px-20">
         <div className="w-full flex flex-col justify-items-start items-start gap-10 py-10">
 
           <p class="mt-4 leading-relaxed text-white">
@@ -21,20 +26,34 @@ export default function RedSection() {
 
 
         <div className="w-full flex flex-col justify-items-start items-start gap-10 py-10">
-       
-          <div className="flex gap-4">
-            <input className="lg:w-2/3 bg-gray-600 p-4 text-white" placeholder="Your Email Address" type="email"/>
-            <button className="lg:w-1/3 bg-red-700">SUBSCRIBE</button>
+
+          <form onSubmit={""} className="flex flex-col gap-4 w-full">
+            <div className="flex lg:flex-row flex-col gap-4 w-full">
+              <input className="lg:w-2/3 bg-[#424242] p-4 text-white" placeholder="Your Email Address" type="email" />
+              <button type="submit" className="lg:w-1/3 lg:p-0 lg:py-0 py-4 text-white bg-[#C42622] cursor-pointer ">SUBSCRIBE</button>
+            </div>
+            <div class="flex items-center">
+              <input onClick={() => setTermCheked(!termChecked)} checked={termChecked} id="default-radio-2" type="radio" value="" name="default-radio" className="w-4 h-4 text-blue-600   ring-offset-gray-800 focus:ring-0 bg-gray-700 border-gray-600" />
+              <label for="default-radio-2" className="ms-2 text-sm font-medium text-gray-300 cursor-pointer ">*I have Learned Privacy Policy and agree to its term</label>
+            </div>
+          </form>
+          <div className="flex justify-end items-center gap-4 w-full">
+            <Link href={"#"}><FaLinkedinIn size={20} className="text-white " /></Link>
+            <Link href={"#"}><FaFacebookF size={20} className="text-white " /></Link>
+            <Link href={"#"}><AiOutlineYoutube size={20} className="text-white " /></Link>
+            <Link href={"#"}><FaInstagram size={20} className="text-white " /></Link>
+
+
+
 
           </div>
-         
-
-          
 
 
 
-       
-        
+
+
+
+
         </div>
       </div>
     </div>
