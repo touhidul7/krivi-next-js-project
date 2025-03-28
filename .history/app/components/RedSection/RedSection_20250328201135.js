@@ -27,7 +27,8 @@ export default function RedSection() {
             <button className="lg:w-1/3 bg-red-700">SUBSCRIBE</button>
 
           </div>
-         
+          <label>"i havve"</label>
+          <input type="checkbox"/>
 
           
 

@@ -21,19 +21,19 @@ export default function RedSection() {
 
 
         <div className="w-full flex flex-col justify-items-start items-start gap-10 py-10">
-       
+        <div className="flex justify-between">
           <div className="flex gap-4">
-            <input className="lg:w-2/3 bg-gray-600 p-4 text-white" placeholder="Your Email Address" type="email"/>
-            <button className="lg:w-1/3 bg-red-700">SUBSCRIBE</button>
+            <input className="bg-gray-600 p-4 text-white w-[60%]" placeholder="Your Email Address" type="email"/>
+            <button className="bg-red-700">SUBSCRIBE</button>
 
           </div>
-         
 
-          
+          <div>
+            
+          </div>
 
 
-
-       
+        </div>
         
         </div>
       </div>
