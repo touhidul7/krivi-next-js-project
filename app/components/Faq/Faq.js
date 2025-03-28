@@ -64,7 +64,7 @@ const Faq = () => {
                                         <details class="p-6 group" >
                                             <summary class="flex items-center justify-between cursor-pointer">
                                                 <h5 class="text-lg font-semibold text-gray-900">
-                                                    What's included in B2B SEO services?                                               </h5>
+                                                    {"What's"} included in B2B SEO services?                                               </h5>
 
                                                 <span class="relative flex-shrink-0 ml-1.5 w-5 h-5 bg-white text-red-700">
                                                     <FaArrowAltCircleDown className='absolute inset-0 w-5 h-5 opacity-100 group-open:opacity-0' />
