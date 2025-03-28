@@ -15,7 +15,7 @@ const NewSection = ({ resetQuestions }) => {
                 setHeaders(data.headers);
             })
             .catch((error) => console.error("Error fetching services:", error));
-    }, []);
+    }, [resetQuestions]);
 
     return (
         <div>
@@ -24,8 +24,8 @@ const NewSection = ({ resetQuestions }) => {
                 <div className="my-10 mx-auto sm:mt-12 sm:px-6  lg:px-0  flex flex-col lg:flex-row gap-3">
 
                     <div className="lg:w-full w-full ">
-                        <div class="bg-white  ">
-                            <div class="container mx-auto py-8 px-4 md:px-0 md:flex md:justify-center md:items-start">
+                        <div className="bg-white  ">
+                            <div className="container mx-auto py-8 px-4 md:px-0 md:flex md:justify-center md:items-start">
 
                                 <section className="sm:mt-6 mx-auto px-4 sm:px-6">
                                     <div className="mt-5 mb-10 new-section flex flex-col lg:flex-row justify-center w-full gap-10 lg:gap-20">
@@ -35,14 +35,13 @@ const NewSection = ({ resetQuestions }) => {
                                             </h1>
                                             <p className="text-lg mb-4 font-semibold text-center">What do our B2B SEO services include?</p>
                                         </div>
-                                    </div>
-
+                                    </div>                             
 
                                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 w-full">
                                         {services.map((service, index) => (
                                             <div key={index} className="h-full border-t-3 border-1 p-4 border-gray-400 flex flex-col gap-4 cursor-pointer hover:border-t-red-600 transition-all relative group bg-[#e9e0e0]">
-                                                <h2 className="text-black text-xl pb-5 font-bold">{service.title}</h2>
-                                                <p>{service.description}</p>
+                                                <h2 className="text-black text-lg pb-5 font-bold">{service.title}</h2>
+                                                <p className="text-md">{service.description}</p>
                                                 <Link href={service.linkHref}>
                                                     <button className="flex justify-center items-center mt-4 cursor-pointer text-red-600 font-medium hover:icon-move">
                                                         {service.linkText} <FaCaretRight className="transition-transform" />
