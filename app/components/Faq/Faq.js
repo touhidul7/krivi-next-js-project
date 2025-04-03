@@ -100,7 +100,7 @@ const Faq = () => {
 
 
 
-                                <div classNameName="md:w-1/2 lg:w-1/3 md:mr-8  p-4">
+                                <div className="md:w-1/2 lg:w-1/3 md:mr-8  p-4">
 
                                     <Image width={400} height={400} alt="image" src={"../../../faq.png"} classNameName="mb-7 w-full" />
 

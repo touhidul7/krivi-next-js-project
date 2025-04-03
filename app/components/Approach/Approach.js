@@ -54,8 +54,9 @@ const Approach = () => {
                         key={index}
                         className={`flex gap-3 p-4 cursor-pointer ${
                           isClicked
-                            ? "bg-red-500 text-white"
+                            ? "bg-red-700 text-white"
                             : "hover:bg-[#DBDBDB]"
+                            
                         }`}
                         onClick={() =>
                           setClickedIndex(isClicked ? null : index)
