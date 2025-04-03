@@ -18,41 +18,41 @@ const Faq = () => {
 
                                     <h1 className="text-3xl font-bold mb-4 ">FAQ</h1>
 
-                                    <div class="bg-white border-none divide-y divide-gray-200 rounded-xl">
+                                    <div className="bg-white border-none divide-y divide-gray-200 rounded-xl">
 
-                                        <details class="p-6 group" open>
-                                            <summary class="flex items-center justify-between cursor-pointer">
-                                                <h5 class="text-lg font-semibold text-gray-900">
+                                        <details className="p-6 group" open>
+                                            <summary className="flex items-center justify-between cursor-pointer">
+                                                <h5 className="text-lg font-semibold text-gray-900">
                                                     What is B2B SEO?
                                                 </h5>
 
-                                                <span class="relative flex-shrink-0 ml-1.5 w-5 h-5 bg-white text-red-700 rounded-full">
+                                                <span className="relative flex-shrink-0 ml-1.5 w-5 h-5 bg-white text-red-700 rounded-full">
                                                     <FaArrowAltCircleDown className='absolute inset-0 w-5 h-5 opacity-100 group-open:opacity-0 ' />
                                                     <FaArrowAltCircleUp className='absolute inset-0 w-5 h-5 opacity-0 group-open:opacity-100' />
 
                                                 </span>
                                             </summary>
 
-                                            <p class="mt-4 leading-relaxed text-gray-700">
+                                            <p className="mt-4 leading-relaxed text-gray-700">
                                                 B2B SEO is a strategic approach to search engine optimization designed for businesses targeting corporate cients. Unlike traditional SEO, it focuses on high-value, competiive keywords that decision-makers use when searching for business solutions. This approach prioritizes industry-specic terms and purchase-intent keywords over broader search terms.
                                             </p>
                                         </details>
 
 
-                                        <details class="p-6 group" >
-                                            <summary class="flex items-center justify-between cursor-pointer">
-                                                <h5 class="text-lg font-semibold text-gray-900">
+                                        <details className="p-6 group" >
+                                            <summary className="flex items-center justify-between cursor-pointer">
+                                                <h5 className="text-lg font-semibold text-gray-900">
                                                     What are B2B SEO services?
                                                 </h5>
 
-                                                <span class="relative flex-shrink-0 ml-1.5 w-5 h-5 bg-white text-red-700">
+                                                <span className="relative flex-shrink-0 ml-1.5 w-5 h-5 bg-white text-red-700">
                                                     <FaArrowAltCircleDown className='absolute inset-0 w-5 h-5 opacity-100 group-open:opacity-0' />
                                                     <FaArrowAltCircleUp className='absolute inset-0 w-5 h-5 opacity-0 group-open:opacity-100' />
 
                                                 </span>
                                             </summary>
 
-                                            <p class="mt-4 leading-relaxed text-gray-700">
+                                            <p className="mt-4 leading-relaxed text-gray-700">
                                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis
                                                 molestias culpa in, recusandae laboriosam neque aliquid libero nesciunt
                                                 voluptate dicta quo officiis explicabo consequuntur distinctio corporis
@@ -61,19 +61,19 @@ const Faq = () => {
                                         </details>
 
 
-                                        <details class="p-6 group" >
-                                            <summary class="flex items-center justify-between cursor-pointer">
-                                                <h5 class="text-lg font-semibold text-gray-900">
+                                        <details className="p-6 group" >
+                                            <summary className="flex items-center justify-between cursor-pointer">
+                                                <h5 className="text-lg font-semibold text-gray-900">
                                                     {"What's"} included in B2B SEO services?                                               </h5>
 
-                                                <span class="relative flex-shrink-0 ml-1.5 w-5 h-5 bg-white text-red-700">
+                                                <span className="relative flex-shrink-0 ml-1.5 w-5 h-5 bg-white text-red-700">
                                                     <FaArrowAltCircleDown className='absolute inset-0 w-5 h-5 opacity-100 group-open:opacity-0' />
                                                     <FaArrowAltCircleUp className='absolute inset-0 w-5 h-5 opacity-0 group-open:opacity-100' />
 
                                                 </span>
                                             </summary>
 
-                                            <p class="mt-4 leading-relaxed text-gray-700">
+                                            <p className="mt-4 leading-relaxed text-gray-700">
                                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis
                                                 molestias culpa in, recusandae laboriosam neque aliquid libero nesciunt
                                                 voluptate dicta quo officiis explicabo consequuntur distinctio corporis
@@ -100,9 +100,9 @@ const Faq = () => {
 
 
 
-                                <div className="md:w-1/2 lg:w-1/3 md:mr-8  p-4">
+                                <div classNameName="md:w-1/2 lg:w-1/3 md:mr-8  p-4">
 
-                                    <Image width={400} height={400} alt="image" src={"../../../faq.png"} className="mb-7 w-full" />
+                                    <Image width={400} height={400} alt="image" src={"../../../faq.png"} classNameName="mb-7 w-full" />
 
                                 </div>
 
