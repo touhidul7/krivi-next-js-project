@@ -8,6 +8,7 @@ import Approach from './components/Approach/Approach'
 import Deliverable from './components/Deliverable/Deliverable'
 import Whyus from './components/WhyUs/Whyus'
 import Faq from './components/Faq/Faq'
+import WhyChoseUs from './components/WhyChoseUs/WhyChoseUs'
 
 
 export default function page() {
@@ -19,7 +20,8 @@ export default function page() {
       {/* <Achievement />  */}
       <Approach />
       <Deliverable/>
-      <Whyus/>
+      {/* <Whyus/> */}
+      <WhyChoseUs/>
       {/* <BoldSteps /> */}
       <DemoVedio />
       {/* <WhyUs/> */}
