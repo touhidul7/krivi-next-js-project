@@ -43,6 +43,7 @@ const Approach = () => {
                   </p>
 
                   <div className="absolute top-0 left-0 w-full h-[.5px] bg-red-600 transition-all duration-500 ease-in-out transform scale-x-0 group-hover:scale-x-100 origin-left"></div>
+                  
                 </div>
 
                 <div className="md:w-1/2 lg:w-2/3 mt-8 md:mt-0 bg-white grid grid-cols-2 gap-3">

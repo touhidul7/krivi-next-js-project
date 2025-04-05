@@ -124,9 +124,9 @@ export default function Hero() {
           </div>
         ))}
       </Slider>
-      <Link href={"#scroll"} className="absolute bottom-0 font-extralight gap-2 text-[12px] right-0 m-6 flex flex-col justify-center items-center text-white">
+     {/*  <Link href={"#scroll"} className="absolute bottom-0 font-extralight gap-2 text-[12px] right-0 m-6 flex flex-col justify-center items-center text-white">
         Scroll <span className="p-2 border-1 border-white rounded-full"><FaAngleDown  size={30}/></span>
-      </Link>
+      </Link> */}
     </div>
   );
 }

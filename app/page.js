@@ -10,6 +10,8 @@ import Whyus from './components/WhyUs/Whyus'
 import Faq from './components/Faq/Faq'
 import WhyChoseUs from './components/WhyChoseUs/WhyChoseUs'
 import MarketingStartegy from './components/MarketingStartegy/MarketingStartegy'
+import Capabilities from './components/Capabilities/Capabilities'
+import KnowledgeAssets from './components/KnowledgeAssets/KnowledgeAssets'
 
 
 export default function page() {
@@ -25,6 +27,9 @@ export default function page() {
       <WhyChoseUs/>
       {/* <BoldSteps /> */}
       <MarketingStartegy/>
+      {/* <DemoVedio /> */}
+      <Capabilities/>
+      <KnowledgeAssets/>
       {/* <DemoVedio /> */}
       {/* <WhyUs/> */}
       <Insights />

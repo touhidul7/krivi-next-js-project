@@ -8,29 +8,28 @@
 
     "services": [
       {
-        "title": "Your Dedicated Team",
-        "description": "Your dedicated team will be with you every step of the way. We will work with you to create a plan that fits your needs. We will be there to help you with any questions or concerns you may have..",
+        "title": "B2B Giants",
+        "description": "We enhance your global presence with pull marketing and SEO to drive growth. With robust and AI-adapted customer insights and ABM strategy, we ensure your digital strategy is future-proof..",
         "linkText": "More",
-        "linkHref": "#"
+        "linkHref": "#",
+        "image":"../../dele-2.png"
       },
       {
-        "title": "Clear, Data-Driven Reports",
-        "description": "We will provide you with clear, data-driven reports that show you how your website is performing. We will help you understand what the data means and how you can use it to improve your website..",
+        "title": "SaaS & Tech",
+        "description": "Vertical solutions designed for tech companies. Enhanced searchability and targeted segmentation strategies to reach your ideal customers.Connect with up to 1,000 qualified prospects annually.",
         "linkText": "More",
-        "linkHref": "#"
+        "linkHref": "#",
+         "image":"../../dele-3.png"
+        
       },
       {
-        "title": "SEO Strategy, Customized for You",
-        "description": "We will create a customized SEO strategy that is tailored to your business. We will work with you to identify your goals and create a plan that will help you achieve them.",
+        "title": "Large Marketing Teams",
+        "description": "As your dedicated Marketing Competency Center we act as an extended marketing team. We provide specialized expertise, 24/7 global coverage",
         "linkText": "More",
-        "linkHref": "#"
-      },
-      {
-        "title": "Complete SEO Solutions under One Roof",
-        "description": "We offer a complete range of SEO services that will help you improve your website's visibility and attract more customers. We will work with you to create a plan that fits your needs and budget..",
-        "linkText": "More",
-        "linkHref": "#"
+        "linkHref": "#",
+         "image":"../../dele-1.png"
       }
+      
     ]
   }
 
