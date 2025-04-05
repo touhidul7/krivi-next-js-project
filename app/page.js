@@ -9,6 +9,7 @@ import Deliverable from './components/Deliverable/Deliverable'
 import Whyus from './components/WhyUs/Whyus'
 import Faq from './components/Faq/Faq'
 import WhyChoseUs from './components/WhyChoseUs/WhyChoseUs'
+import MarketingStartegy from './components/MarketingStartegy/MarketingStartegy'
 
 
 export default function page() {
@@ -23,7 +24,8 @@ export default function page() {
       {/* <Whyus/> */}
       <WhyChoseUs/>
       {/* <BoldSteps /> */}
-      <DemoVedio />
+      <MarketingStartegy/>
+      {/* <DemoVedio /> */}
       {/* <WhyUs/> */}
       <Insights />
       <Faq/>
