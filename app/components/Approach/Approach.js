@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import { useState } from "react";
 
@@ -31,7 +30,7 @@ const Approach = () => {
                   </h1>
 
                   <p>
-                    In today's competitive landscape, exceptional customer
+                    In {"today's"} competitive landscape, exceptional customer
                     experiences define brand success. We help CMOs navigate
                     complexity and deliver cohesive brand experiences through
                     intelligent, scalable marketing operations
