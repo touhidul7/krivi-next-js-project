@@ -1,6 +1,5 @@
 'use client';
 import Image from "next/image";
-import { FaDollarSign } from "react-icons/fa";
 import { useState } from "react";
 import caseStudies from "../../../public/data/caseStudy.json"; // Adjust the path as necessary
 // Your JSON data
@@ -15,7 +14,7 @@ const MarketingStrategy = () => {
     return (
         <div className="flex w-full flex-col items-center lg:w-[80%] mx-auto justify-center py-20 px-5">
             <h2 className="text-lg font-semibold mb-10">Marketing that Works</h2>
-            <div className="flex w-full justify-between items-center space-x-4">
+            <div className="flex w-full justify-between items-center space-x-2 lg:space-x-4">
                 <EquationItem title="Expertise & Knowledge X Data" />
                 <span className="text-2xl font-bold">+</span>
                 <EquationItem title="Creativity X Ideas" />
@@ -78,16 +77,16 @@ const MarketingStrategy = () => {
 const EquationItem = ({ title, isResult, color }) => {
     return (
         <div className={`flex flex-col items-center ${isResult ? 'text-red-600' : 'text-black'}`}>
-            <div className={`flex items-center justify-center w-20 h-20 border-2 rounded-full p-3 ${isResult ? 'bg-red-600 text-white' : 'border-black'}`}>
+            <div className={`flex items-center justify-center lg:w-20 md:w-16 w-8 lg:h-20 md:h-16 h-8 border-2 rounded-full lg:p-3 ${isResult ? 'bg-red-600 text-white' : 'border-black'}`}>
                 <Image
                     width={200}
                     height={200}
                     alt="image"
                     src={color ? "../../../doller-white.png" : "../../../doller.png"}
-                    className="w-16 h-auto"
+                    className="lg:w-16 md:w-10 w-5 h-auto"
                 />
             </div>
-            <p className={`text-sm mt-2 ${isResult ? 'font-bold' : ''}`}>{title}</p>
+            <p className={`lg:text-sm text-[10px] mt-2 ${isResult ? 'font-bold' : ''}`}>{title}</p>
         </div>
     );
 };
