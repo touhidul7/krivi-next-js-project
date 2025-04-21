@@ -16,20 +16,14 @@ export default function page() {
   return (
     <div className=''>
       <Hero />
-      {/* <Achievement />  */}
       <Approach />
-      <Deliverable/>
-      {/* <Whyus/> */}
-      <WhyChoseUs/>
-      {/* <BoldSteps /> */}
-      <MarketingStartegy/>
-      {/* <DemoVedio /> */}
-      <Capabilities/>
-      <KnowledgeAssets/>
-      {/* <DemoVedio /> */}
-      {/* <WhyUs/> */}
+      <Deliverable />
+      <WhyChoseUs />
+      <MarketingStartegy />
+      <Capabilities />
+      <KnowledgeAssets />
       <Insights />
-      <Faq/>
+      <Faq />
       <RedSection />
     </div>
   )
