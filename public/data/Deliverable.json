@@ -1,0 +1,37 @@
+
+
+{
+    "headers": {
+      "industry": "Deliverable",
+      "businessNeed": "Change Management"
+    },
+
+    "services": [
+      {
+        "title": "B2B Giants",
+        "description": "We enhance your global presence with pull marketing and SEO to drive growth. With robust and AI-adapted customer insights and ABM strategy, we ensure your digital strategy is future-proof..",
+        "linkText": "More",
+        "linkHref": "#",
+        "image":"../../dele-2.png"
+      },
+      {
+        "title": "SaaS & Tech",
+        "description": "Vertical solutions designed for tech companies. Enhanced searchability and targeted segmentation strategies to reach your ideal customers.Connect with up to 1,000 qualified prospects annually.",
+        "linkText": "More",
+        "linkHref": "#",
+         "image":"../../dele-3.png"
+        
+      },
+      {
+        "title": "Large Marketing Teams",
+        "description": "As your dedicated Marketing Competency Center we act as an extended marketing team. We provide specialized expertise, 24/7 global coverage",
+        "linkText": "More",
+        "linkHref": "#",
+         "image":"../../dele-1.png"
+      }
+      
+    ]
+  }
+
+
+  

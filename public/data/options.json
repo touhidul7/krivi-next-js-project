@@ -1,0 +1,30 @@
+{
+  "options": [
+    { "name": "Private Equity Report", "image": "/madlib-02.webp" },
+    { "name": "Private Equity Webinar", "image": "/madlib-03.webp" },
+    { "name": "AI In Marketing", "image": "/madlib-02.webp" },
+    { "name": "Payments", "image": "/madlib-03.webp" },
+    { "name": "Scroll", "image": "/madlib-02.webp" },
+    { "name": "Advanced Manufacturing & Services", "image": "/madlib-03.webp" },
+    { "name": "Aerospace & Defense", "image": "/madlib-02.webp" },
+    { "name": "Agribusiness", "image": "/madlib-03.webp" },
+    { "name": "Automotive", "image": "/madlib-02.webp" },
+    { "name": "Aviation", "image": "/madlib-03.webp" },
+    { "name": "Chemicals", "image": "/madlib-02.webp" },
+    { "name": "Construction & Infrastructure", "image": "/madlib-03.webp" },
+    { "name": "Consumer Products", "image": "/madlib-02.webp" },
+    { "name": "Energy & Natural Resources", "image": "/madlib-03.webp" },
+    { "name": "Financial Services", "image": "/madlib-02.webp" },
+    { "name": "Healthcare & Life Sciences", "image": "/madlib-03.webp" },
+    { "name": "Machinery & Equipment", "image": "/madlib-02.webp" },
+    { "name": "Media & Entertainment", "image": "/madlib-03.webp" },
+    { "name": "Mining", "image": "/madlib-02.webp" },
+    { "name": "Oil & Gas", "image": "/madlib-03.webp" },
+    { "name": "Paper & Packaging", "image": "/madlib-02.webp" },
+    { "name": "Private Equity", "image": "/madlib-03.webp" },
+    { "name": "Retail", "image": "/madlib-02.webp" },
+    { "name": "Social Impact", "image": "/madlib-03.webp" },
+    { "name": "Technology", "image": "/madlib-02.webp" },
+    { "name": "Telecommunications", "image": "/madlib-03.webp" }
+  ]
+}

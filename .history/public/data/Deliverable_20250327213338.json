@@ -1,0 +1,38 @@
+
+
+{
+    "headers": {
+      "industry": "Deliverable",
+      "businessNeed": "Change Management"
+    },
+
+    "services": [
+      {
+        "title": "Your Dedicated Team",
+        "description": "Your dedicated team will be with you every step of the way. We will work with you to create a plan that fits your needs. We will be there to help you with any questions or concerns you may have..",
+        "linkText": "More",
+        "linkHref": "#"
+      },
+      {
+        "title": "Clear, Data-Driven Reports",
+        "description": "A winning digital strategy balances today’s needs with tomorrow’s opportunities. We apply our \"Today Forward, Future Back\" approach to deliver immediate, tangible benefits that propel you into your digital future.",
+        "linkText": "More",
+        "linkHref": "#"
+      },
+      {
+        "title": "SEO Strategy, Customized for You",
+        "description": "A winning digital strategy balances today’s needs with tomorrow’s opportunities. We apply our \"Today Forward, Future Back\" approach to deliver immediate, tangible benefits that propel you.",
+        "linkText": "More",
+        "linkHref": "#"
+      },
+      {
+        "title": "Complete SEO Solutions under One Roof",
+        "description": "A winning digital strategy balances today’s needs with tomorrow’s opportunities. We apply our \"Today Forward, Future Back\" approach to deliver immediate, tangible benefits that propel you.",
+        "linkText": "More",
+        "linkHref": "#"
+      }
+    ]
+  }
+
+
+  

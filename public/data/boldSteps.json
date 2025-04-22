@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "img": "/1bold.webp",
+    "featured": {
+      "title": "Sales blueprint puts IT Services Co.'s growth back on track",
+      "link": "#"
+    },
+    "helped": {
+      "title": "Agile Enterprise",
+      "des": "Become faster, more flexible, and intensely customer-focused",
+      "link": "#"
+    }
+  },
+  {
+    "id": 1,
+    "img": "/2bold.webp",
+    "featured": {
+      "title": "Salesforce integration generates M&A success in healthcare",
+      "link": "#"
+    },
+    "helped": {
+      "title": "Go-to-Market Strategy",
+      "des": "Enhance every element of your commercial functions to deliver top and bottom line growth",
+      "link": "#"
+    }
+  }
+]
