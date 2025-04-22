@@ -55,7 +55,7 @@ export default function Hero() {
       longdescription:
         "Build future-ready marketing and sales operations powered by artificial intelligence and data-driven insights. Turn strategy into measurable success with our comprehensive suite of AI solutions.",
       image: "/slide-3.webp",
-      linktxt: "Get Started",
+      linktxt: "Get Start",
       link: "#",
     },
     {
