@@ -28,44 +28,49 @@ export default function Hero() {
     {
       id: 1,
       name: "Private Equity",
-      title: "Global Private Equity Report",
-      description: "We provide top-notch consulting services to boost your success.",
-      longdescription: "Build future-ready marketing and sales operations powered by artificial intelligence and data-driven insights. Turn strategy into measurable success with our comprehensive suite of AI solutions.",
+      title: "Transform Your Growth Engine with AI",
+      description: "Where Marketing Meets Intelligence, Sales Meet Precision",
+      longdescription:
+        "Build future-ready marketing and sales operations powered by artificial intelligence and data-driven insights. Turn strategy into measurable success with our comprehensive suite of AI solutions.",
       image: "/slide-1.webp",
-      linktxt: "Read the report",
+      linktxt: "Get Started",
       link: "#",
     },
     {
       id: 2,
       name: "AI In Marketing",
-      title: "Innovative Strategies",
-      description: "Transform your business with cutting-edge solutions.",
-      longdescription: "Build future-ready marketing and sales operations powered by artificial intelligence and data-driven insights. Turn strategy into measurable success with our comprehensive suite of AI solutions.",
+      title: "Transform Your Growth Engine with AI",
+      description: "Where Marketing Meets Intelligence, Sales Meet Precision",
+      longdescription:
+        "Build future-ready marketing and sales operations powered by artificial intelligence and data-driven insights. Turn strategy into measurable success with our comprehensive suite of AI solutions.",
       image: "/slide-2.webp",
-      linktxt: "Register for the webinar",
+      linktxt: "Get Started",
       link: "#",
     },
     {
       id: 4,
       name: "Payments",
-      title: "Can US Banks Protect Their Business?",
-      description: "Our experts are here to help you achieve your goals.",
-      longdescription: "Build future-ready marketing and sales operations powered by artificial intelligence and data-driven insights. Turn strategy into measurable success with our comprehensive suite of AI solutions.",
+      title: "Transform Your Growth Engine with AI",
+      description: "Where Marketing Meets Intelligence, Sales Meet Precision",
+      longdescription:
+        "Build future-ready marketing and sales operations powered by artificial intelligence and data-driven insights. Turn strategy into measurable success with our comprehensive suite of AI solutions.",
       image: "/slide-3.webp",
-      linktxt: "Read more",
+      linktxt: "Get Start",
       link: "#",
     },
     {
       id: 3,
       name: "AI In Marketing",
-      title: "For Marketers, Gen AI Moves from Novelty",
-      description: "Our experts are here to help you achieve your goals.",
-      longdescription: "Build future-ready marketing and sales operations powered by artificial intelligence and data-driven insights. Turn strategy into measurable success with our comprehensive suite of AI solutions.",
+      title: "Transform Your Growth Engine with AI",
+      description: "Where Marketing Meets Intelligence, Sales Meet Precision",
+      longdescription:
+        "Build future-ready marketing and sales operations powered by artificial intelligence and data-driven insights. Turn strategy into measurable success with our comprehensive suite of AI solutions.",
       image: "/slide-3.webp",
-      linktxt: "Read more",
+      linktxt: "Get Started",
       link: "#",
     },
   ];
+  
 
   const handleMenuClick = (index) => {
     setCurrentSlide(index);
