@@ -8,6 +8,7 @@ import {
     FaRocket,
     FaChartLine,
 } from "react-icons/fa";
+import Image from "next/image";
 
 const MarketingStrategy = () => {
     const [selectedCaseStudy, setSelectedCaseStudy] = useState(caseStudies[0]);
@@ -29,7 +30,7 @@ const MarketingStrategy = () => {
                 <EquationItem title="Results" icon={<FaChartLine />} isResult />
             </div>
 
-            <img src="../../../marketing-img.png" alt="image" className="w-full h-[200px] mt-10" />
+            <Image width={500} height={500} src="../../../marketing-img.png" alt="image" className="w-full h-[200px] mt-10" />
 
             {/* Case Study section Start here */}
             <div className="w-full bg-[#e3e3e3] py-10">
