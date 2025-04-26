@@ -1,11 +1,16 @@
 'use client';
-import Image from "next/image";
 import { useState } from "react";
-import caseStudies from "../../../public/data/caseStudy.json"; // Adjust the path as necessary
-// Your JSON data
+import caseStudies from "../../../public/data/caseStudy.json";
+
+import {
+    FaBrain,
+    FaLightbulb,
+    FaRocket,
+    FaChartLine,
+} from "react-icons/fa";
 
 const MarketingStrategy = () => {
-    const [selectedCaseStudy, setSelectedCaseStudy] = useState(caseStudies[0]); // Default to first case study
+    const [selectedCaseStudy, setSelectedCaseStudy] = useState(caseStudies[0]);
 
     const handleCaseStudySelect = (caseStudy) => {
         setSelectedCaseStudy(caseStudy);
@@ -15,29 +20,30 @@ const MarketingStrategy = () => {
         <div className="flex w-full flex-col items-center lg:w-[80%] mx-auto justify-center py-20 px-5">
             <h2 className="text-lg font-semibold mb-10">Marketing that Works</h2>
             <div className="flex w-full justify-between items-center space-x-2 lg:space-x-4">
-                <EquationItem title="Expertise & Knowledge X Data" />
+                <EquationItem title="Expertise & Knowledge X Data" icon={<FaBrain />} />
                 <span className="text-2xl font-bold">+</span>
-                <EquationItem title="Creativity X Ideas" />
+                <EquationItem title="Creativity X Ideas" icon={<FaLightbulb />} />
                 <span className="text-2xl font-bold">+</span>
-                <EquationItem title="Out of the Box" />
+                <EquationItem title="Out of the Box" icon={<FaRocket />} />
                 <span className="text-2xl font-bold">=</span>
-                <EquationItem color="-white" title="Results" isResult />
+                <EquationItem title="Results" icon={<FaChartLine />} isResult />
             </div>
-            <Image width={400} height={400} alt="image" src={"../../../marketing-img.png"} className="w-full h-[200px] mt-10" />
+
+            <img src="../../../marketing-img.png" alt="image" className="w-full h-[200px] mt-10" />
 
             {/* Case Study section Start here */}
             <div className="w-full bg-[#e3e3e3] py-10">
                 <div className="flex items-stretch gap-10 justify-between w-[80%] mx-auto">
                     <div className="flex gap-4 w-full">
-                        {/* tabs - fixed width */}
                         <div className="flex justify-between flex-col gap-2 text-[12px] w-1/3 min-w-fit button">
                             {caseStudies.map((caseStudy) => (
                                 <button
                                     key={caseStudy.id}
-                                    className={`py-2 px-4 border border-transparent cursor-pointer hover:border-black rounded-sm ${selectedCaseStudy.id === caseStudy.id
+                                    className={`py-2 px-4 border border-transparent cursor-pointer hover:border-black rounded-sm ${
+                                        selectedCaseStudy.id === caseStudy.id
                                             ? 'bg-[#c52222] text-white'
                                             : 'bg-white text-black hover:bg-[#c52222] hover:text-white'
-                                        }`}
+                                    }`}
                                     onClick={() => handleCaseStudySelect(caseStudy)}
                                 >
                                     {caseStudy.title}
@@ -45,15 +51,15 @@ const MarketingStrategy = () => {
                             ))}
                         </div>
 
-                        {/* headingsection - flexible width with stable layout */}
                         <div className="flex-1 justify-between flex flex-col gap-2 text-[12px] headingsection">
                             {caseStudies.map((caseStudy) => (
                                 <div
                                     key={caseStudy.id}
-                                    className={`w-full text-[10px] cursor-pointer p-1 ${selectedCaseStudy.id === caseStudy.id
+                                    className={`w-full text-[10px] cursor-pointer p-1 ${
+                                        selectedCaseStudy.id === caseStudy.id
                                             ? 'font-semibold'
                                             : 'hover:font-semibold'
-                                        }`}
+                                    }`}
                                     onClick={() => handleCaseStudySelect(caseStudy)}
                                 >
                                     {caseStudy.heading}
@@ -74,17 +80,13 @@ const MarketingStrategy = () => {
     );
 };
 
-const EquationItem = ({ title, isResult, color }) => {
+const EquationItem = ({ title, icon, isResult }) => {
     return (
         <div className={`flex flex-col items-center ${isResult ? 'text-red-600' : 'text-black'}`}>
-            <div className={`flex items-center justify-center lg:w-20 md:w-16 w-8 lg:h-20 md:h-16 h-8 border-2 rounded-full lg:p-3 ${isResult ? 'bg-red-600 text-white' : 'border-black'}`}>
-                <Image
-                    width={200}
-                    height={200}
-                    alt="image"
-                    src={color ? "../../../doller-white.png" : "../../../doller.png"}
-                    className="lg:w-16 md:w-10 w-5 h-auto"
-                />
+            <div className={`flex items-center justify-center lg:w-20 md:w-16 w-8 lg:h-20 md:h-16 h-8 border-2 rounded-full lg:p-3 ${
+                isResult ? 'bg-red-600 text-white' : 'border-black'
+            }`}>
+                <div className="text-xl lg:text-3xl">{icon}</div>
             </div>
             <p className={`lg:text-sm text-[10px] mt-2 ${isResult ? 'font-bold' : ''}`}>{title}</p>
         </div>

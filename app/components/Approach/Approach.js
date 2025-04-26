@@ -77,7 +77,7 @@ const Approach = () => {
           <div className="lg:w-full w-full bg-[#1c1c1f]">
             <div className="py-20 lg:w-[85%] mx-auto">
               <div className="container mx-auto px-4 md:px-0 md:flex md:justify-center md:items-start">
-                <div className="md:w-1/2 lg:w-1/3 md:mr-8 h-full border-t-2 border-1 px-4 pt-4 pb-10 border-gray-400 flex flex-col gap-4 cursor-pointer hover:border-t-red-600 transition-all relative group bg-white">
+                <div className="md:w-1/2 lg:w-1/3 md:mr-8 h-full border-t-2 border-1 px-4 pt-4 pb-[194px] border-gray-400 flex flex-col gap-4 cursor-pointer hover:border-t-red-600 transition-all relative group bg-white">
                   <h1 className="text-4xl font-bold mb-2">
                     Expert solutions for every aspect of your marketing journey
                   </h1>
