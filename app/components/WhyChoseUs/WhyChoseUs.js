@@ -21,19 +21,19 @@ const WhyChoseUs = () => {
                 <div className="mx-auto sm:mt-12 sm:px-6 md:mt-16 lg:mt-10 lg:px-0 flex flex-col lg:flex-row gap-3">
                     <div className="lg:w-full w-full bg-[#E7000B]">
                         <div className="lg:w-[85%] mx-auto py-20">
-                            <div className="container mt-12 mx-auto px-4 md:px-0 md:flex md:justify-center md:items-start">
-                                <div className="md:w-1/2 lg:w-1/3 md:mr-8 p-4">
+                            <div className="container h-full mx-auto px-4 md:px-0 md:flex lg:items-stretch md:justify-center md:items-start">
+                                <div className="md:w-1/2 lg:w-1/3 md:mr-8  h-full">
                                     <Image
                                         width={400}
                                         height={400}
                                         alt="Why Choose Us"
                                         src="/whyUs.png"
-                                        className="mb-7 w-full"
+                                        className="mb-7 lg:mb-0 w-full h-full"
                                     />
                                 </div>
 
-                                <div className="md:w-1/2 lg:w-2/3 mt-8 md:mt-0 px-4 py-4 flex flex-col gap-8">
-                                    <h1 className="text-xl font-bold text-left text-white">Why Choose Us</h1>
+                                <div className="md:w-1/2 lg:w-2/3 mt-8 md:mt-0 px-4 py-4 lg:py-0 flex flex-col  lg:justify-between gap-8">
+                                    <h1 className="text-4xl -mt-1 font-bold text-left text-white">Why Choose Us</h1>
                                     <p className="text-white text-sm text-gray-200 font-thin">
                                         We tap into existing market demand to maximize your ROI through targeted pull marketing.
                                         By connecting with decision-makers at the right moment in their buying journey,

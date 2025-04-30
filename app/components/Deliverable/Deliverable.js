@@ -29,10 +29,10 @@ const NewSection = ({ resetQuestions }) => {
                         <div className="bg-white  ">
                             <div className="container mx-auto  px-4 md:px-0 md:flex md:justify-center md:items-start">
 
-                                <section className="sm:mt-6 mx-auto px-4 pb-5 sm:px-6">
+                                <section className="sm:mt-6 mx-auto lg:px-0 px-4 pb-5 sm:px-6">
                                     <div className=" mb-10 new-section flex flex-col lg:flex-row justify-center w-full gap-10 lg:gap-20">
                                         <div className="w-full ">
-                                            <h1 className="text-[32px] sm:text-[42px]  leading-10 sm:leading-12 text-black mb-3 font-medium text-center">
+                                            <h1 className="text-4xl font-bold text-center mb-4">
                                                 {headers.industry}
                                             </h1>
                                             <p className="text-lg mb-4 font-semibold text-center">What do our B2B SEO services include?</p>

@@ -18,7 +18,18 @@ const MarketingStrategy = () => {
     };
 
     return (
-        <div className="flex w-full flex-col items-center lg:w-[80%] mx-auto justify-center py-20 px-5">
+
+        <section id="scroll" className="sm:mt-6 lg:mt-8 mt-12 max-w-full mx-auto px-4 sm:px-6 lg:px-0">
+                <div className="mx-auto sm:mt-12 sm:px-6 md:mt-16 lg:mt-10 lg:px-0 flex flex-col lg:flex-row gap-3">
+                    <div className="lg:w-full w-full ">
+                        <div className="lg:w-[85%] mx-auto py-20">
+                            {/* start */}
+
+
+                          
+
+
+        <div className="container flex w-full flex-col items-center mx-auto justify-center lg:px-0 px-5">
             <h2 className="text-lg font-semibold mb-10">Marketing that Works</h2>
             <div className="flex w-full justify-between items-center space-x-2 lg:space-x-4">
                 <EquationItem title="Expertise & Knowledge X Data" icon={<FaBrain />} />
@@ -78,6 +89,14 @@ const MarketingStrategy = () => {
             </div>
             {/* Case Study section End here */}
         </div>
+
+
+
+          {/* end */}
+          </div>
+                    </div>
+                </div>
+        </section>
     );
 };
 
