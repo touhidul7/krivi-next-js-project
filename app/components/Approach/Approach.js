@@ -77,7 +77,7 @@ const Approach = () => {
           <div className="lg:w-full w-full bg-[#1c1c1f]">
             <div className="py-20 lg:w-[85%] mx-auto">
               <div className="container mx-auto px-4 md:px-0 md:flex md:justify-center lg:items-stretch md:items-start">
-                <div className="md:w-1/2 lg:w-1/3 md:mr-8 h-full border-t-2 border-1 px-4 pt-4 pb-[194px] border-gray-400 flex flex-col gap-4 cursor-pointer hover:border-t-red-600 transition-all relative group bg-white">
+                <div className="md:w-1/2 lg:w-1/3 md:mr-8 bg-white h-full border-t-2 border-1 px-4 pt-4 pb-[194px] border-gray-400 flex flex-col gap-4 cursor-pointer hover:border-t-red-600 transition-all relative group bg-white">
                   <h1 className="text-4xl font-bold mb-2">
                     Expert solutions for every aspect of your marketing journey
                   </h1>
@@ -98,7 +98,7 @@ const Approach = () => {
                   <div className="absolute top-0 left-0 w-full h-[.5px] bg-red-600 transition-all duration-500 ease-in-out transform scale-x-0 group-hover:scale-x-100 origin-left"></div>
                 </div>
 
-                <div className="md:w-1/2 lg:w-2/3  bg-white  mt-8 md:mt-0 bg-white grid grid-cols-2 gap-3">
+                <div className="md:w-1/2 lg:w-2/3 mt-8 md:mt-0 bg-white grid grid-cols-2 gap-3">
                   {items.map((item, index) => {
                     const isClicked = clickedIndex === index;
                     const Icon = item.icon;

@@ -30,7 +30,7 @@ const MarketingStrategy = () => {
 
 
         <div className="container flex w-full flex-col items-center mx-auto justify-center lg:px-0 px-5">
-            <h2 className="text-lg font-semibold mb-10">Marketing that Works</h2>
+            <h2 className="text-4xl font-bold mb-10">Marketing that Works</h2>
             <div className="flex w-full justify-between items-center space-x-2 lg:space-x-4">
                 <EquationItem title="Expertise & Knowledge X Data" icon={<FaBrain />} />
                 <span className="text-2xl font-bold">+</span>

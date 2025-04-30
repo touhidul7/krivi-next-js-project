@@ -27,7 +27,7 @@ const Capabilities = () => {
                 <section className="sm:mt-6 mx-auto lg:mx-0 px-4 lg:px-0 pb-5 sm:px-6">
                   <div className=" mb-10 new-section flex flex-col lg:flex-row justify-center w-full gap-10 lg:gap-20">
                     <div className="w-full ">
-                      <h1 className="text-3xl leading-10 sm:leading-12 text-black mb-3 font-semibold text-center">
+                      <h1 className="text-4xl font-bold leading-10 sm:leading-12 text-black mb-3  text-center">
                         Our Core Capabilities - Marketing Operations managed
                         services
                       </h1>

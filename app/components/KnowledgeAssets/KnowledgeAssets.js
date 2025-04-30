@@ -22,7 +22,7 @@ const KnowledgeAssets = () => {
 
                                 <div className="md:w-1/2 mt-8 md:mt-0  px-4 lg:px-0 py-4 justify-stretch items-stretch flex flex-col gap-8">
 
-                                    <h1 className="text-3xl font-bold mb-4 mt-0 text-white ">Knowledge Assets</h1>
+                                    <h1 className="text-4xl font-bold mb-4 mt-0 text-white ">Knowledge Assets</h1>
 
                                     <div className=" border-none divide-y divide-gray-200 rounded-xl h-full my-auto">
 
