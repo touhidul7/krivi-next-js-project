@@ -70,7 +70,7 @@ export default function Hero() {
       link: "#",
     },
   ];
-  
+
 
   const handleMenuClick = (index) => {
     setCurrentSlide(index);
@@ -92,44 +92,44 @@ export default function Hero() {
               alt={slide.title}
               className="absolute top-0 left-0 w-full h-full object-cover"
             />
-            <div className="absolute pt-32  inset-0 flex flex-col mx-auto items-start lg:px-36 bottom-0 justify-between text-black hero-bg p-6 ">
-              <div></div>
-              <div className="z-50 lg:w-[40%]">
-                {/* <h4 className="lg:text-[1.125rem] text-[16px] font-graphic font-bold z-400">
+            <div className="absolute pt-32 h-full inset-0 flex flex-col  items-start  lg:px-0 bottom-0 justify-between text-black hero-bg py-6 ">
+              <div className="md:w-[85%] mx-auto h-full flex flex-col  items-start lg:px-0 bottom-0 justify-center">{/* between */}
+                <div className="z-50 lg:w-[40%]">
+                  {/* <h4 className="lg:text-[1.125rem] text-[16px] font-graphic font-bold z-400">
                   {slide.name}
                 </h4> */}
-                <Link
-                  href={slide.link}
-                  className="text-[40px] lg:text-[60px] font-semibold font-graphic z-400  leading-[70px]"
-                >
-                  {slide.title}
-                </Link>
-                <p className="text-lg md:text-2xl font-semibold mt-4 z-400">{slide.description}</p>
-                <p className="mt-4 z-400 text-md">{slide.longdescription}</p>
-                <button className="z-50 flex gap-4 hover:gap-8 items-center mt-10 cursor-pointer bg-[#E7000B] text-white p-4">
-                  {slide.linktxt} <FaArrowRightLong />
-                </button>
-              </div>
-
-              {/* Slide Menu */}
-              <div className="slide-menu z-50 w-full flex items-center justify-between gap-2 lg:gap-4 mt-10">
-                {slides.map((slideitem, index) => (
-                  <button
-                    key={slideitem.id}
-                    className={`slide-menu-item  z-50 lg:text-2xl text-sm cursor-pointer p-6 border-t-5 transition-all ${
-                      currentSlide === index ? "border-red-600" : "border-transparent"
-                    } hover:border-red-600`}
-                    onClick={() => handleMenuClick(index)}
+                  <Link
+                    href={slide.link}
+                    className="text-[40px] lg:text-[60px] font-semibold font-graphic z-400  leading-[70px]"
                   >
-                    {slideitem.name}
+                    {slide.title}
+                  </Link>
+                  <p className="text-lg md:text-2xl font-semibold mt-4 z-400">{slide.description}</p>
+                  <p className="mt-4 z-400 text-md">{slide.longdescription}</p>
+                  <button className="z-50 flex gap-4 hover:gap-8 items-center mt-10 cursor-pointer bg-[#E7000B] text-white p-4">
+                    {slide.linktxt} <FaArrowRightLong />
                   </button>
-                ))}
+                </div>
+
+                {/* Slide Menu */}
+                <div className="slide-menu z-50 w-full flex items-center justify-between gap-2 lg:gap-4 mt-10">
+                  {slides.map((slideitem, index) => (
+                    <button
+                      key={slideitem.id}
+                      className={`slide-menu-item  z-50 lg:text-2xl text-sm cursor-pointer p-6 border-t-5 transition-all ${currentSlide === index ? "border-red-600" : "border-transparent"
+                        } hover:border-red-600`}
+                      onClick={() => handleMenuClick(index)}
+                    >
+                      {slideitem.name}
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         ))}
       </Slider>
-     {/*  <Link href={"#scroll"} className="absolute bottom-0 font-extralight gap-2 text-[12px] right-0 m-6 flex flex-col justify-center items-center text-white">
+      {/*  <Link href={"#scroll"} className="absolute bottom-0 font-extralight gap-2 text-[12px] right-0 m-6 flex flex-col justify-center items-center text-white">
         Scroll <span className="p-2 border-1 border-white rounded-full"><FaAngleDown  size={30}/></span>
       </Link> */}
     </div>

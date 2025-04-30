@@ -29,8 +29,8 @@ const MarketingStrategy = () => {
                           
 
 
-        <div className="container flex w-full flex-col items-center mx-auto justify-center lg:px-0 px-5">
-            <h2 className="text-4xl font-bold mb-10">Marketing that Works</h2>
+        <div className=" flex w-full flex-col items-center mx-auto justify-center lg:px-0 ">{/* container */}
+            <h2 className="text-2xl md:text-4xl font-bold mb-10">Marketing that Works</h2>
             <div className="flex w-full justify-between items-center space-x-2 lg:space-x-4">
                 <EquationItem title="Expertise & Knowledge X Data" icon={<FaBrain />} />
                 <span className="text-2xl font-bold">+</span>
@@ -41,11 +41,11 @@ const MarketingStrategy = () => {
                 <EquationItem title="Results" icon={<FaChartLine />} isResult />
             </div>
 
-            <Image width={500} height={500} src="../../../marketing-img.png" alt="image" className="w-full h-[200px] mt-10" />
+            <Image width={500} height={500} src="../../../marketing-img.png" alt="image" className="w-full h-auto lg:h-[200px] mt-10" />
 
             {/* Case Study section Start here */}
             <div className="w-full bg-[#e3e3e3] py-10">
-                <div className="flex items-stretch gap-10 justify-between w-[80%] mx-auto">
+                <div className="flex items-stretch gap-10 md:flex-row flex-col justify-between w-[80%] mx-auto">
                     <div className="flex gap-4 w-full">
                         <div className="flex justify-between flex-col gap-2 text-[12px] w-1/3 min-w-fit button">
                             {caseStudies.map((caseStudy) => (

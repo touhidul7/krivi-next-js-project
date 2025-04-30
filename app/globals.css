@@ -71,3 +71,7 @@ body {
                   linear-gradient(to top, white 10%, rgba(255, 255, 255, 0) 30%);
 
 }
+
+.min-h-fit{
+  min-height: fit-content !important;
+}

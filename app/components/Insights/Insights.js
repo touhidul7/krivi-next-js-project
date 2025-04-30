@@ -6,13 +6,13 @@ import { CiBookmark } from "react-icons/ci";
 const Insights = () => {
   return (
     <div className="">
-      <section className="sm:mt-6 bg-[#E9E0E0] container  max-w-full lg:py-20 mx-auto px-4 sm:px-6 lg:px-0  py-10 ">
+      <section className="sm:mt-6 bg-[#E9E0E0]   max-w-full lg:py-20 mx-auto px-4 sm:px-6 lg:px-0  py-10 ">
 
         <div className="lg:w-[85%] mx-auto">
 
         <h3 className="flex items-center w-full mb-10 ">
           <span className="flex-grow bg-gray-400 rounded h-[0.5px] "></span>
-          <span className="mx-3 text-4xl font-bold">Our Latest Insights</span>
+          <span className="mx-3 text-2xl md:text-4xl font-bold">Our Latest Insights</span>
           <span className="flex-grow bg-gray-400 rounded h-[0.5px]"></span>
         </h3>
 

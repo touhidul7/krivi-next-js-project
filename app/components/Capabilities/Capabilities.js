@@ -1,8 +1,10 @@
+'use client';
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { BsArrowUpRightCircleFill } from "react-icons/bs";
 
 const Capabilities = () => {
+  const [clicketd, setClicked] = useState(0);
   const items = [
     "AI-powered omnichannel personalization at scale",
     "Advanced customer profiling and journey optimization",
@@ -20,14 +22,14 @@ const Capabilities = () => {
   return (
     <div className=" bg-[#E3E3E3] py-1">
       <section className="sm:mt-6 max-w-full lg:w-[85%] mx-auto px-4 sm:px-6 lg:px-0">
-        <div className="my-10 mx-auto sm:mt-12 sm:px-6  lg:px-0  flex flex-col lg:flex-row gap-3">
+        <div className="my-10 mx-auto sm:mt-12   lg:px-0  flex flex-col lg:flex-row gap-3">
           <div className="lg:w-full w-full ">
             <div className="">
-              <div className="container mx-auto  px-4 md:px-0 md:flex md:justify-center md:items-start">
-                <section className="sm:mt-6 mx-auto lg:mx-0 px-4 lg:px-0 pb-5 sm:px-6">
+              <div className=" mx-auto w-full lg:mx-0  px-0 lg:px-0 md:px-0 md:flex md:justify-center lg:items-stretch md:items-start">{/* container */}
+                <section className="sm:mt-6 w-full lg:mx-0 px-0 lg:px-0 pb-5 ">
                   <div className=" mb-10 new-section flex flex-col lg:flex-row justify-center w-full gap-10 lg:gap-20">
                     <div className="w-full ">
-                      <h1 className="text-4xl font-bold leading-10 sm:leading-12 text-black mb-3  text-center">
+                      <h1 className="text-2xl md:text-4xl font-bold leading-10 sm:leading-12 text-black mb-3  text-center">
                         Our Core Capabilities - Marketing Operations managed
                         services
                       </h1>
@@ -38,7 +40,10 @@ const Capabilities = () => {
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2 w-full">
-                    <div className="h-full border-t-3  hover:border-t-red-600 transition-all relative group border-gray-400  bg-white p-10">
+
+
+                    
+                    <div onClick={()=>setClicked(0)} className={`h-full w-full p-10 ${clicketd===0?"border-t-3  hover:border-t-red-600 transition-all relative group border-gray-400  bg-white":"border-t-3 border-t-transparent"}`}>
                       <a
                         href="#"
                         className="text-white p-2  bg-red-700 text-sm font-bold"
@@ -67,7 +72,7 @@ const Capabilities = () => {
                             >
                               {item}
 
-                              
+
                             </a>
                           </div>
                         ))}
@@ -76,14 +81,14 @@ const Capabilities = () => {
 
                       <div className="absolute top-0 left-0 w-full h-[.5px] bg-red-600 transition-all duration-500 ease-in-out transform scale-x-0 group-hover:scale-x-100 origin-left"></div>
 
-                  
+
 
                     </div>
 
 
 
 
-                    <div className="h-full  border-gray-400 p-10">
+                    <div onClick={()=>setClicked(1)} className={`h-full w-full p-10 ${clicketd===1?"border-t-3  hover:border-t-red-600 transition-all relative group border-gray-400  bg-white":"border-t-3 border-t-transparent"}`}>
                       <a
                         href="#"
                         className="text-white p-2  bg-red-700 text-sm font-bold"
@@ -91,7 +96,7 @@ const Capabilities = () => {
                         Digital Marketing & Media Growth Solutions
                       </a>
                       <p className="text-sm mt-4 font-semibold">
-                      Digital Marketing & Media Growth Solutions
+                        Digital Marketing & Media Growth Solutions
                       </p>
                       <p className="text-sm mt-4 font-semibold">
                         Core Capabilities:
@@ -111,11 +116,13 @@ const Capabilities = () => {
                             >
                               {item}
 
-  
+
                             </a>
                           </div>
                         ))}
                       </div>
+
+                      <div className="absolute top-0 left-0 w-full h-[.5px] bg-red-600 transition-all duration-500 ease-in-out transform scale-x-0 group-hover:scale-x-100 origin-left"></div>
                     </div>
 
 
