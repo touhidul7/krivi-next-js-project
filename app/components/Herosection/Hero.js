@@ -93,7 +93,7 @@ export default function Hero() {
               className="absolute top-0 left-0 w-full h-full object-cover"
             />
             <div className="absolute pt-32 h-full inset-0 flex flex-col  items-start  lg:px-0 bottom-0 justify-between text-black hero-bg py-6 ">
-              <div className="md:w-[85%] mx-auto h-full flex flex-col  items-start lg:px-0 bottom-0 justify-center">{/* between */}
+              <div className="md:w-[85%] mx-auto md:px-0 px-4 pt-12 md:pt-0 lg:pt-0 h-full flex flex-col  items-start lg:px-0 bottom-0 justify-center">{/* between */}
                 <div className="z-50 lg:w-[40%]">
                   {/* <h4 className="lg:text-[1.125rem] text-[16px] font-graphic font-bold z-400">
                   {slide.name}
@@ -112,7 +112,7 @@ export default function Hero() {
                 </div>
 
                 {/* Slide Menu */}
-                <div className="slide-menu z-50 w-full flex items-center justify-between gap-2 lg:gap-4 mt-10">
+                <div className="slide-menu z-50 w-full flex items-center justify-between flex-wrap gap-2 lg:gap-4 mt-10">
                   {slides.map((slideitem, index) => (
                     <button
                       key={slideitem.id}
@@ -129,9 +129,7 @@ export default function Hero() {
           </div>
         ))}
       </Slider>
-      {/*  <Link href={"#scroll"} className="absolute bottom-0 font-extralight gap-2 text-[12px] right-0 m-6 flex flex-col justify-center items-center text-white">
-        Scroll <span className="p-2 border-1 border-white rounded-full"><FaAngleDown  size={30}/></span>
-      </Link> */}
+
     </div>
   );
 }
