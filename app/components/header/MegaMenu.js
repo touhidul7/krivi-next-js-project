@@ -11,14 +11,27 @@ import { CiBookmark } from "react-icons/ci";
 const MegaMenu = () => {
   const [activeMenu, setActiveMenu] = useState(null);
   const [menuItems, setMenuItems] = useState([]);
+  const [scrolled, setScrolled] = useState(false);
 
   // Set menuItems state with menuData on component mount
   useEffect(() => {
     setMenuItems(menuData.menuItems);
-  }, []);
+    
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 10;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [scrolled]);
 
   return (
-<nav className="bg-black/12 hover:bg-white transition fixed top-0 w-full z-[999] border-b-[0.5px] border-white">
+<nav className={`${scrolled ? 'bg-white' : 'bg-black/12'} hover:bg-white transition fixed top-0 w-full z-[999] border-b-[0.5px] border-white`}>
 
 
       <div className="max-w-screen min-w-screen px-4 sm:px-6 lg:px-8">
@@ -73,10 +86,10 @@ const MegaMenu = () => {
             ))}
           </div>
           </div>
-          <div className="flex items-center text-[#979797] gap-2 font-graphic text-md cursor-pointer">
+          <div className="flex items-center text-black gap-2 font-graphic text-md cursor-pointer">
             Explore
-            <IoIosSearch size={30} />
-            <CiBookmark size={40} className="border-l-[0.4px] border-gray-300 pl-2" />
+            <IoIosSearch size={30} className="text-black"/>
+            <CiBookmark size={40} className="border-l-[0.4px] border-gray-300 pl-2 text-black" />
 
           </div>
         </div>

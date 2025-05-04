@@ -78,7 +78,7 @@ body {
 }
 
 @keyframes zoomIn {
-  0% {
+  10% {
     transform: scale(1);
   }
   100% {
