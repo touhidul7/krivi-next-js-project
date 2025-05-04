@@ -41,7 +41,7 @@ const MarketingStrategy = () => {
                 <EquationItem title="Results" icon={<FaChartLine />} isResult />
             </div>
 
-            <Image width={500} height={500} src="../../../marketing-img.png" alt="image" className="w-full h-auto lg:h-[200px] mt-10" />
+            <Image width={500} height={500} src="../../../marketing-img.png" alt="image" className="w-full h-auto lg:h-auto mt-10" />
 
             {/* Case Study section Start here */}
             <div className="w-full bg-[#e3e3e3] py-10">
