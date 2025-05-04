@@ -85,17 +85,14 @@ export default function Hero() {
               width={2000}
               src={slide.image}
               alt={slide.title}
-              className="absolute top-0 left-0 w-full h-full object-cover"
+              className="absolute top-0 left-0 w-full h-full object-cover zoom-in-animation"
             />
-            <div className="absolute pt-32  inset-0 flex flex-col mx-auto items-start lg:px-36 bottom-0 justify-between text-black hero-bg p-6 ">
+            <div className="absolute pt-32 inset-0 flex flex-col mx-auto items-start lg:px-36 bottom-0 justify-between text-black hero-bg p-6 ">
               <div></div>
               <div className="z-50 lg:w-[40%]">
-                {/* <h4 className="lg:text-[1.125rem] text-[16px] font-graphic font-bold z-400">
-                  {slide.name}
-                </h4> */}
                 <Link
                   href={slide.link}
-                  className="text-[40px] lg:text-[60px] font-semibold font-graphic z-400  leading-[70px]"
+                  className="text-[40px] lg:text-[60px] font-semibold font-graphic z-400 leading-[70px]"
                 >
                   {slide.title}
                 </Link>
@@ -105,13 +102,11 @@ export default function Hero() {
                   {slide.linktxt} <FaArrowRightLong />
                 </button>
               </div>
-
-              {/* Slide Menu */}
-              <div className="slide-menu z-50 w-full flex items-center justify-between gap-2 lg:gap-4 mt-10">
+              <div className="slide-menu z-50 w-full flex items-center justify-between gap-2 lg:gap-4 mt-4">
                 {slides.map((slideitem, index) => (
                   <button
                     key={slideitem.id}
-                    className={`slide-menu-item  z-50 lg:text-2xl text-sm cursor-pointer p-6 border-t-5 transition-all ${
+                    className={`slide-menu-item z-50 lg:text-2xl text-sm cursor-pointer p-4 border-t-5 transition-colors duration-150 ${
                       currentSlide === index ? "border-red-600" : "border-transparent"
                     } hover:border-red-600`}
                     onClick={() => handleMenuClick(index)}

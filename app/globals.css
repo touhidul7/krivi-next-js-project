@@ -71,3 +71,16 @@ body {
                   linear-gradient(to top, white 10%, rgba(255, 255, 255, 0) 30%);
 
 }
+
+.zoom-in-animation {
+  animation: zoomIn 10s infinite; /* Adjust duration as needed */
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1); /* Adjust the zoom level as needed */
+  }
+}
