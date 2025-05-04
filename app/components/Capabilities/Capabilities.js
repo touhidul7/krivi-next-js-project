@@ -42,8 +42,8 @@ const Capabilities = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2 w-full">
 
 
-                    
-                    <div onClick={()=>setClicked(0)} className={`h-full w-full p-10 ${clicketd===0?"border-t-3  hover:border-t-red-600 transition-all relative group border-gray-400  bg-white":"border-t-3 border-t-transparent"}`}>
+
+                    <div onMouseOver={() => setClicked(0)} className={`h-full w-full p-10 ${clicketd === 0 ? "border-t-3  hover:border-t-red-600 transition-all relative group border-gray-400  bg-white" : "border-t-3 border-t-transparent"}`}>
                       <a
                         href="#"
                         className="text-white p-2  bg-red-700 text-sm font-bold"
@@ -88,7 +88,7 @@ const Capabilities = () => {
 
 
 
-                    <div onClick={()=>setClicked(1)} className={`h-full w-full p-10 ${clicketd===1?"border-t-3  hover:border-t-red-600 transition-all relative group border-gray-400  bg-white":"border-t-3 border-t-transparent"}`}>
+                    <div onMouseOver={() => setClicked(1)} className={`h-full w-full p-10 ${clicketd === 1 ? "border-t-3  hover:border-t-red-600 transition-all relative group border-gray-400  bg-white" : "border-t-3 border-t-transparent"}`}>
                       <a
                         href="#"
                         className="text-white p-2  bg-red-700 text-sm font-bold"
