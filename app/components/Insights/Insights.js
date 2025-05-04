@@ -5,15 +5,18 @@ import { CiBookmark } from "react-icons/ci";
 
 const Insights = () => {
   return (
-    <div>
-      <section className="sm:mt-6 bg-[#E9E0E0]  max-w-full lg:py-20 mx-auto px-4 sm:px-6 lg:px-8  py-10 mt-10">
+    <div className="">
+      <section className="sm:mt-6 bg-[#E9E0E0]   max-w-full lg:py-20 mx-auto px-4 sm:px-6 lg:px-0  py-10 ">
+
+        <div className="lg:w-[85%] mx-auto">
+
         <h3 className="flex items-center w-full mb-10 ">
           <span className="flex-grow bg-gray-400 rounded h-[0.5px] "></span>
-          <span className="mx-3 text-3xl font-bold">Our Latest Insights</span>
+          <span className="mx-3 text-2xl md:text-4xl font-bold">Our Latest Insights</span>
           <span className="flex-grow bg-gray-400 rounded h-[0.5px]"></span>
         </h3>
 
-        <div className="mx-auto max-w-[1260px] ">
+        <div className="mx-auto  mx-auto">
           <main className="flex justify-center items-stretch flex-col   md:flex-row gap-5">
 
             <div className=" w-full md:w-1/2">
@@ -64,6 +67,7 @@ const Insights = () => {
           <div className="w-full text-center mt-20 text-[13px] font-semibold font-graphic">
             <button className="p-4 border border-gray-300  uppercase bg-[#E7000B] text-white cursor-pointer">See all insights</button>
           </div>
+        </div>
         </div>
       </section>
     </div>

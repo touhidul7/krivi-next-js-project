@@ -9,20 +9,20 @@ const Faq = () => {
             <section id="scroll" className="sm:mt-6  mt-12 max-w-full mx-auto px-4 sm:px-6 lg:px-0">
                 <div className=" mx-auto sm:mt-12 sm:px-6 md:mt-16 lg:mt-0 lg:px-0  flex flex-col lg:flex-row gap-3">
 
-                    <div className="lg:w-full w-full ">
+                    <div className="  lg:w-[85%] mx-auto w-full ">
                         <div className="bg-white py-20">
-                            <div className="container mt-12 mx-auto px-4 md:px-0 md:flex md:justify-center md:items-start">
+                            <div className=" mt-12 mx-auto  md:px-0 md:flex md:justify-stretch md:items-start lg:items-stretch">
 
 
-                                <div className="md:w-1/2 lg:w-1/2 mt-8 md:mt-0  px-4 py-4 flex flex-col gap-8">
+                                <div className="md:w-1/2 lg:w-1/2 mt-8 lg:mt-0 md:mt-0   lg:px-0 py-4 h-full flex flex-col justify-between gap-8">
 
-                                    <h1 className="text-3xl font-bold mb-4 ">FAQ</h1>
+                                    <h1 className="text-2xl md:text-4xl font-bold mb-4 lg:mx-0 ">FAQ</h1>
 
-                                    <div className="bg-white border-none divide-y divide-gray-200 rounded-xl">
+                                    <div className="  divide-y divide-gray-200 rounded-xl h-full ">
 
-                                        <details className="p-6 group" open>
+                                        <details className="py-6 group" >
                                             <summary className="flex items-center justify-between cursor-pointer">
-                                                <h5 className="text-lg font-semibold text-gray-900">
+                                                <h5 className="text-md md:text-lg font-semibold text-gray-900">
                                                     What is B2B SEO?
                                                 </h5>
 
@@ -39,9 +39,9 @@ const Faq = () => {
                                         </details>
 
 
-                                        <details className="p-6 group" >
+                                        <details className="py-6 group" >
                                             <summary className="flex items-center justify-between cursor-pointer">
-                                                <h5 className="text-lg font-semibold text-gray-900">
+                                                <h5 className="text-md md:text-lg font-semibold text-gray-900">
                                                     What are B2B SEO services?
                                                 </h5>
 
@@ -61,9 +61,9 @@ const Faq = () => {
                                         </details>
 
 
-                                        <details className="p-6 group" >
+                                        <details className="py-6 group" >
                                             <summary className="flex items-center justify-between cursor-pointer">
-                                                <h5 className="text-lg font-semibold text-gray-900">
+                                                <h5 className="text-md md:text-lg font-semibold text-gray-900">
                                                     {"What's"} included in B2B SEO services?                                               </h5>
 
                                                 <span className="relative flex-shrink-0 ml-1.5 w-5 h-5 bg-white text-red-700">
@@ -84,7 +84,7 @@ const Faq = () => {
                                             {options?.secondQuestionOptions.map((option, index) => (
                                                 <button
                                                     key={index} // or index if option values aren't unique
-                                                    className="px-3 py-2 border cursor-pointer hover:bg-[#CC0000] hover:text-white border-gray-200 text-[#CC0000] font-semibold text-md rounded-4xl"
+                                                    className="px-3 py-2 border cursor-pointer hover:bg-[#CC0000] hover:text-white border-gray-200 text-[#CC0000] font-semibold text-sm md:text-md rounded-4xl"
                                                 >
                                                     {option}
                                                 </button>
@@ -100,7 +100,7 @@ const Faq = () => {
 
 
 
-                                <div className="md:w-1/2 lg:w-1/3 md:mr-8  p-4">
+                                <div className="md:w-1/2 lg:w-1/2 md:mr-8 lg:mr-0  p-4 lg:pr-0 lg:pl4">
 
                                     <Image width={400} height={400} alt="image" src={"../../../faq.png"} className="mb-7 w-full" />
 

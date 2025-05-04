@@ -28,44 +28,49 @@ export default function Hero() {
     {
       id: 1,
       name: "Private Equity",
-      title: "Global Private Equity Report",
-      description: "We provide top-notch consulting services to boost your success.",
-      longdescription: "Build future-ready marketing and sales operations powered by artificial intelligence and data-driven insights. Turn strategy into measurable success with our comprehensive suite of AI solutions.",
+      title: "Transform Your Growth Engine with AI",
+      description: "Where Marketing Meets Intelligence, Sales Meet Precision",
+      longdescription:
+        "Build future-ready marketing and sales operations powered by artificial intelligence and data-driven insights. Turn strategy into measurable success with our comprehensive suite of AI solutions.",
       image: "/slide-1.webp",
-      linktxt: "Read the report",
+      linktxt: "Get Started",
       link: "#",
     },
     {
       id: 2,
       name: "AI In Marketing",
-      title: "Innovative Strategies",
-      description: "Transform your business with cutting-edge solutions.",
-      longdescription: "Build future-ready marketing and sales operations powered by artificial intelligence and data-driven insights. Turn strategy into measurable success with our comprehensive suite of AI solutions.",
+      title: "Transform Your Growth Engine with AI",
+      description: "Where Marketing Meets Intelligence, Sales Meet Precision",
+      longdescription:
+        "Build future-ready marketing and sales operations powered by artificial intelligence and data-driven insights. Turn strategy into measurable success with our comprehensive suite of AI solutions.",
       image: "/slide-2.webp",
-      linktxt: "Register for the webinar",
+      linktxt: "Get Started",
       link: "#",
     },
     {
       id: 4,
       name: "Payments",
-      title: "Can US Banks Protect Their Business?",
-      description: "Our experts are here to help you achieve your goals.",
-      longdescription: "Build future-ready marketing and sales operations powered by artificial intelligence and data-driven insights. Turn strategy into measurable success with our comprehensive suite of AI solutions.",
+      title: "Transform Your Growth Engine with AI",
+      description: "Where Marketing Meets Intelligence, Sales Meet Precision",
+      longdescription:
+        "Build future-ready marketing and sales operations powered by artificial intelligence and data-driven insights. Turn strategy into measurable success with our comprehensive suite of AI solutions.",
       image: "/slide-3.webp",
-      linktxt: "Read more",
+      linktxt: "Get Start",
       link: "#",
     },
     {
       id: 3,
       name: "AI In Marketing",
-      title: "For Marketers, Gen AI Moves from Novelty",
-      description: "Our experts are here to help you achieve your goals.",
-      longdescription: "Build future-ready marketing and sales operations powered by artificial intelligence and data-driven insights. Turn strategy into measurable success with our comprehensive suite of AI solutions.",
+      title: "Transform Your Growth Engine with AI",
+      description: "Where Marketing Meets Intelligence, Sales Meet Precision",
+      longdescription:
+        "Build future-ready marketing and sales operations powered by artificial intelligence and data-driven insights. Turn strategy into measurable success with our comprehensive suite of AI solutions.",
       image: "/slide-3.webp",
-      linktxt: "Read more",
+      linktxt: "Get Started",
       link: "#",
     },
   ];
+
 
   const handleMenuClick = (index) => {
     setCurrentSlide(index);
@@ -87,41 +92,44 @@ export default function Hero() {
               alt={slide.title}
               className="absolute top-0 left-0 w-full h-full object-cover zoom-in-animation"
             />
-            <div className="absolute pt-32 inset-0 flex flex-col mx-auto items-start lg:px-36 bottom-0 justify-between text-black hero-bg p-6 ">
-              <div></div>
-              <div className="z-50 lg:w-[40%]">
-                <Link
-                  href={slide.link}
-                  className="text-[40px] lg:text-[60px] font-semibold font-graphic z-400 leading-[70px]"
-                >
-                  {slide.title}
-                </Link>
-                <p className="text-lg md:text-2xl font-semibold mt-4 z-400">{slide.description}</p>
-                <p className="mt-4 z-400 text-md">{slide.longdescription}</p>
-                <button className="z-50 flex gap-4 hover:gap-8 items-center mt-10 cursor-pointer bg-[#E7000B] text-white p-4">
-                  {slide.linktxt} <FaArrowRightLong />
-                </button>
-              </div>
-              <div className="slide-menu z-50 w-full flex items-center justify-between gap-2 lg:gap-4 mt-4">
-                {slides.map((slideitem, index) => (
-                  <button
-                    key={slideitem.id}
-                    className={`slide-menu-item z-50 lg:text-2xl text-sm cursor-pointer p-4 border-t-5 transition-colors duration-150 ${
-                      currentSlide === index ? "border-red-600" : "border-transparent"
-                    } hover:border-red-600`}
-                    onClick={() => handleMenuClick(index)}
+            <div className="absolute pt-32 h-full inset-0 flex flex-col  items-start  lg:px-0 bottom-0 justify-between text-black hero-bg py-6 ">
+              <div className="md:w-[85%] mx-auto md:px-0 px-4 pt-12 md:pt-0 lg:pt-0 h-full flex flex-col  items-start lg:px-0 bottom-0 justify-center">{/* between */}
+                <div className="z-50 lg:w-[40%]">
+                  {/* <h4 className="lg:text-[1.125rem] text-[16px] font-graphic font-bold z-400">
+                  {slide.name}
+                </h4> */}
+                  <Link
+                    href={slide.link}
+                    className="text-[40px] lg:text-[60px] font-semibold font-graphic z-400  leading-[70px]"
                   >
-                    {slideitem.name}
+                    {slide.title}
+                  </Link>
+                  <p className="text-lg md:text-2xl font-semibold mt-4 z-400">{slide.description}</p>
+                  <p className="mt-4 z-400 text-md">{slide.longdescription}</p>
+                  <button className="z-50 flex gap-4 hover:gap-8 items-center mt-10 cursor-pointer bg-[#E7000B] text-white p-4">
+                    {slide.linktxt} <FaArrowRightLong />
                   </button>
-                ))}
+                </div>
+
+                {/* Slide Menu */}
+                <div className="slide-menu z-50 w-full flex items-center justify-between flex-wrap gap-2 lg:gap-4 mt-10">
+                  {slides.map((slideitem, index) => (
+                    <button
+                      key={slideitem.id}
+                      className={`slide-menu-item  z-50 lg:text-2xl text-sm cursor-pointer p-6 border-t-5 transition-all ${currentSlide === index ? "border-red-600" : "border-transparent"
+                        } hover:border-red-600`}
+                      onClick={() => handleMenuClick(index)}
+                    >
+                      {slideitem.name}
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         ))}
       </Slider>
-      <Link href={"#scroll"} className="absolute bottom-0 font-extralight gap-2 text-[12px] right-0 m-6 flex flex-col justify-center items-center text-white">
-        Scroll <span className="p-2 border-1 border-white rounded-full"><FaAngleDown  size={30}/></span>
-      </Link>
+
     </div>
   );
 }

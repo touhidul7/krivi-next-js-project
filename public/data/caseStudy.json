@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Case Study 1",
+        "heading": "GTM Strategy for a US based Enterprise Solutions Company",
+        "description": "A successful GTM strategy for a US-based enterprise solutions company required strong market positioning targeting mid-to-large enterprises in finance, healthcare, and technology sectors. We implemented an account-based marketing approach combined with strategic partnerships, resulting in a 47% increase in qualified leads within 6 months. The tailored SaaS pricing model with enterprise licensing options drove $2.3M in new ARR while maintaining 92% customer retention."
+    },
+    {
+        "id": 2,
+        "title": "Case Study 2",
+        "heading": "Communication Strategy and Design Development for a Niche Technology Player",
+        "description": "For a specialized AI-powered logistics platform, we developed a comprehensive communication framework that clarified their complex value proposition. Our rebranding included a new visual identity system and messaging architecture that increased website conversion by 35%. The integrated campaign across digital, events, and analyst relations positioned them as thought leaders, contributing to a successful Series B funding round of $28M."
+    },
+    {
+        "id": 3,
+        "title": "Case Study 3",
+        "heading": "Fraction CMO service for an Industry specific ERP company",
+        "description": "As fractional CMO for a manufacturing ERP provider, we overhauled their go-to-market strategy to focus on vertical-specific solutions. By implementing targeted account-based campaigns and developing case studies showcasing ROI metrics, we helped increase average deal size by 62%. The restructured sales enablement materials and competitive battlecards reduced sales cycles from 9 to 5 months while improving win rates against key competitors."
+    }
+]
